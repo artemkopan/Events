@@ -1,0 +1,1 @@
+include ':app', ':data', ':core', ':presentation', ':data-network', ':di'

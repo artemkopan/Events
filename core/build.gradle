@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    api deps.kotlin.stdlib
+
+    api deps.dagger.runtime
+
+    api deps.rxjava2
+    api deps.rx_kotlin
+
+    api deps.support.annotations
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
