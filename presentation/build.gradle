@@ -37,4 +37,5 @@ dependencies {
     implementation deps.lifecycle.extensions
 
     implementation deps.glide.runtime
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 }
