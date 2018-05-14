@@ -18,7 +18,7 @@ import dagger.Module
 interface EventsComponent {
 
     fun inject(activity: EventsActivity)
-    fun inject(activity: EventListFragment)
+    fun inject(eventListFragment: EventListFragment)
     fun inject(eventDetailFragment: EventDetailFragment)
 
     object Initializer {
