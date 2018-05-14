@@ -1,7 +1,7 @@
 package com.artemkopan.core.entity
 
 data class ProviderEntity(
-	val name: String? = null,
-	val id: Int? = null,
-	val normalizedPhoneNumber: String? = null
+        val name: String?,
+        val id: Int?,
+        val normalizedPhoneNumber: String?
 )
