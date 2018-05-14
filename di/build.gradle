@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion build_versions.target_sdk
@@ -22,4 +23,7 @@ android {
 
 dependencies {
     implementation project(':core')
+
+    api deps.dagger.runtime
+    kapt deps.dagger.compiler
 }

@@ -24,7 +24,7 @@ object NetworkModule {
 
     @JvmStatic
     @Provides
-    internal fun provideOkhttp(app: App, logger: Logger): OkHttpClient {
+    internal fun provideOkhttp(app: App): OkHttpClient {
         val clientBuilder = OkHttpClient.Builder()
                 .followRedirects(true)
                 .followSslRedirects(true)
@@ -34,7 +34,7 @@ object NetworkModule {
             clientBuilder.addNetworkInterceptor(StethoInterceptor())
 
             val httpLogger  = HttpLoggingInterceptor.Logger { message ->
-                logger.d(Const.Tag.NETWORK, message)
+                Logger.d(Const.Tag.NETWORK, message)
             }
 
             clientBuilder.addNetworkInterceptor(HttpLoggingInterceptor(httpLogger)

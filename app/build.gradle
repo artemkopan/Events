@@ -9,7 +9,7 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "artemkopan.com.events"
+        applicationId "com.artemkopan.events"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode build_versions.versionCode
@@ -26,11 +26,15 @@ android {
 
 dependencies {
     implementation project(':di')
-    implementation project(':data')
+    implementation project(':data-repo')
+    implementation project(':data-network')
     implementation project(':core')
     implementation project(':presentation')
 
     implementation deps.timber
+    implementation deps.support.app_compat
+    implementation deps.lifecycle.extensions
+
 
     kapt deps.dagger.compiler
 }

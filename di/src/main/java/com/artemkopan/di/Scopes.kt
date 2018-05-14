@@ -1,4 +1,4 @@
-package com.artemkopan.di.component
+package com.artemkopan.di
 
 @javax.inject.Scope annotation class ActivityScope
 @javax.inject.Scope annotation class ServiceScope

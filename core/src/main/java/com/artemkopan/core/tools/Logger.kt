@@ -3,31 +3,29 @@ package com.artemkopan.core.tools
 import android.support.annotation.IntDef
 
 @Suppress("unused")
-class Logger {
+object Logger {
 
-    companion object {
-        private const val TAG = "Logger"
+    private const val TAG = "Logger"
 
-        /**
-         * Priority constant for the println method;
-         */
-        const val DEBUG = 3
+    /**
+     * Priority constant for the println method;
+     */
+    const val DEBUG = 3
 
-        /**
-         * Priority constant for the println method;
-         */
-        const val INFO = 4
+    /**
+     * Priority constant for the println method;
+     */
+    const val INFO = 4
 
-        /**
-         * Priority constant for the println method;
-         */
-        const val WARN = 5
+    /**
+     * Priority constant for the println method;
+     */
+    const val WARN = 5
 
-        /**
-         * Priority constant for the println method;
-         */
-        const val ERROR = 6
-    }
+    /**
+     * Priority constant for the println method;
+     */
+    const val ERROR = 6
 
     private val PRINTERS = ArrayList<Printer>()
 

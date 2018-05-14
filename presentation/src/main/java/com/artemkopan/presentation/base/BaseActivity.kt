@@ -19,8 +19,6 @@ abstract class BaseActivity<ViewModel : BaseViewModel> : AppCompatActivity() {
 
     @Inject
     protected lateinit var viewModelFactory: Lazy<ViewModelProvider.Factory>
-    @Inject
-    protected lateinit var logger: Logger
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +48,7 @@ abstract class BaseActivity<ViewModel : BaseViewModel> : AppCompatActivity() {
      */
     protected fun initViewModel() {
         if (!::viewModelFactory.isInitialized) {
-            logger.w("ViewModelFactory is not initialized! Please, check your dagger inject logic.")
+            Logger.w("ViewModelFactory is not initialized! Please, check your dagger inject logic.")
             return
         }
         viewModel = ViewModelProviders.of(this, viewModelFactory.get())

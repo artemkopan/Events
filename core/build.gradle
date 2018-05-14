@@ -2,9 +2,9 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    api deps.kotlin.stdlib
+    implementation deps.kotlin.stdlib
 
-    api deps.dagger.runtime
+    api deps.javax
 
     api deps.rxjava2
     api deps.rx_kotlin

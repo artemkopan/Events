@@ -3,36 +3,34 @@ package com.artemkopan.events
 import android.app.Application
 import android.content.Context
 import com.artemkopan.core.tools.Logger
+import com.artemkopan.data.network.di.NetworkComponent
 import com.artemkopan.di.App
 import com.artemkopan.di.component.ApplicationProvider
+import com.artemkopan.di.component.NetworkProvider
 import com.artemkopan.events.di.AppComponent
+import timber.log.Timber
 
 class EventsApp : Application(), App {
 
-//    @Inject
-//    lateinit var logger: Logger
 
-    val appComponent: AppComponent by lazy { AppComponent.Initializer.init(this) }
+    val applicationProvider: AppComponent by lazy { AppComponent.Initializer.init(this) }
 
     override fun onCreate() {
         super.onCreate()
-        appComponent.inject(this)
+        applicationProvider.inject(this)
+        AppInjector(this).registerCallbacks()
         initLogger()
-        Logger.DEBUG;
     }
 
-    override fun getAppComponent(): ApplicationProvider = appComponent
-
-    override fun getApplicationContext(): Context {
-        return super.getApplicationContext()
-    }
+    override fun applicationContext(): Context = applicationContext
+    override fun applicationProvider(): ApplicationProvider = applicationProvider
 
     private fun initLogger() {
-//        if (BuildConfig.DEBUG) {
-//            Timber.plant(Timber.DebugTree())
-//            logger.addPrinter(LoggerPrinter.Timber())
-//        } else {
-//            logger.addPrinter(LoggerPrinter.Crashlytics())
-//        }
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+            Logger.addPrinter(LoggerPrinter.Timber())
+        } else {
+            Logger.addPrinter(LoggerPrinter.Crashlytics())
+        }
     }
 }

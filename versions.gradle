@@ -21,6 +21,7 @@ versions.room = "1.1.0"
 versions.lifecycle = "1.1.1"
 versions.support = "27.1.1"
 versions.dagger = "2.16"
+versions.javax = "1@jar"
 versions.junit = "4.12"
 versions.espresso = "3.0.1"
 versions.retrofit = "2.4.0"
@@ -99,6 +100,7 @@ dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
 dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
 
 deps.dagger = dagger
+deps.javax = "javax.inject:javax.inject:$versions.javax"
 
 def espresso = [:]
 espresso.core = "com.android.support.test.espresso:espresso-core:$versions.espresso"
@@ -118,6 +120,7 @@ deps.mockito = mockito
 
 def kotlin = [:]
 kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.stdlib_common = "\"org.jetbrains.kotlin:kotlin-stdlib-common:$versions.kotlin"
 kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
 kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
 kotlin.allopen = "org.jetbrains.kotlin:kotlin-allopen:$versions.kotlin"

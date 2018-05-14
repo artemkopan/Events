@@ -6,5 +6,4 @@ class EventsInteractorImpl @Inject constructor(private val eventsNetworkClient: 
     : EventsInteractor {
 
 
-
 }

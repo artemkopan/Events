@@ -1,7 +1,7 @@
 package com.artemkopan.events.di
 
-import com.artemkopan.di.component.ApplicationProvider
-import com.artemkopan.di.component.MainToolsProvider
+import com.artemkopan.data.network.di.NetworkComponent
+import com.artemkopan.di.component.*
 import com.artemkopan.events.EventsApp
 import dagger.Component
 import javax.inject.Singleton
@@ -9,7 +9,9 @@ import javax.inject.Singleton
 
 @Component(
         dependencies = [
-            MainToolsProvider::class
+            MainToolsProvider::class,
+            NetworkProvider::class,
+            InteractorProvider::class
         ]
 )
 @Singleton
@@ -24,8 +26,16 @@ interface AppComponent : ApplicationProvider {
             val mainToolsProvider = MainToolsComponent.Initializer
                     .init(app)
 
+            val networkProvider = NetworkComponent.Initializer
+                    .init(mainToolsProvider)
+
+            val interactorProvider = InteractorComponent.Initializer
+                    .init(networkProvider)
+
             return DaggerAppComponent.builder()
                     .mainToolsProvider(mainToolsProvider)
+                    .networkProvider(networkProvider)
+                    .interactorProvider(interactorProvider)
                     .build()
         }
     }
