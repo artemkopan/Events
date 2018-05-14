@@ -1,0 +1,1277 @@
+{
+  "success": true,
+  "content": {
+    "items": [
+      {
+        "id": 269,
+        "name": "Ресторан",
+        "address": "Киев,Саксаганського 9 (м.Дворец Спорта/Олимпийская)",
+        "location": {
+          "latitude": "50.435644",
+          "longitude": "30.519085"
+        },
+        "hot": false,
+        "provider": {
+          "id": 116,
+          "name": "Сули & Гули",
+          "phone": {
+            "normalized_phone_number": "380731589317"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 332,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/332.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/332_small.jpeg"
+                }
+              },
+              {
+                "id": 333,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/333.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/333_small.jpeg"
+                }
+              },
+              {
+                "id": 334,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/334.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/334_small.jpeg"
+                }
+              },
+              {
+                "id": 335,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/335.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/335_small.jpeg"
+                }
+              },
+              {
+                "id": 336,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/336.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/269/albums/192/336_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 673,
+            "price": 300,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/269/voucher/245ad86cfa35e99.jpg",
+            "schedules": []
+          },
+          {
+            "id": 674,
+            "price": 500,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/269/voucher/35ad86cfa53379.jpg",
+            "schedules": []
+          },
+          {
+            "id": 675,
+            "price": 600,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/269/voucher/395ad86cfa5b773.jpg",
+            "schedules": []
+          },
+          {
+            "id": 676,
+            "price": 750,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/269/voucher/755ad86cfaca7cd.jpg",
+            "schedules": []
+          },
+          {
+            "id": 703,
+            "price": 1000,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/269/voucher/435adde47280e7a.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "23:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 270,
+        "name": "Ресторан",
+        "address": "Киев, Шота Руставели 16 (м.пл.Льва Толстого/Дворец Спорта)",
+        "location": {
+          "latitude": "50.438959",
+          "longitude": "30.519448"
+        },
+        "hot": false,
+        "provider": {
+          "id": 119,
+          "name": "Тouch café",
+          "phone": {
+            "normalized_phone_number": "380672174004"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 339,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/339.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/339_small.jpeg"
+                }
+              },
+              {
+                "id": 340,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/340.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/340_small.jpeg"
+                }
+              },
+              {
+                "id": 341,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/341.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/341_small.jpeg"
+                }
+              },
+              {
+                "id": 342,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/342.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/342_small.jpeg"
+                }
+              },
+              {
+                "id": 343,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/343.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/343_small.jpeg"
+                }
+              },
+              {
+                "id": 344,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/344.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/344_small.jpeg"
+                }
+              },
+              {
+                "id": 345,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/345.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/345_small.jpeg"
+                }
+              },
+              {
+                "id": 346,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/346.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/270/albums/193/346_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 678,
+            "price": 500,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрения, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/935ad8904ede062.jpg",
+            "schedules": []
+          },
+          {
+            "id": 679,
+            "price": 750,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрения, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/705ad8904eec537.jpg",
+            "schedules": []
+          },
+          {
+            "id": 680,
+            "price": 1000,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрения, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/115ad8904ef2ef2.jpg",
+            "schedules": []
+          },
+          {
+            "id": 681,
+            "price": 1500,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрения, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/235ad8904f0d831.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "04:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1294,
+        "name": "Ресторан",
+        "address": "Киев, Вышгородская 45",
+        "location": {
+          "latitude": "50.5107043",
+          "longitude": "30.4493487"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1090,
+          "name": "НВ cafe",
+          "phone": {
+            "normalized_phone_number": "380674134545"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1519,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/10/d2/cb/1a/cafe.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/10/d2/cb/1a/cafe.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1805,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3955,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5997,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380674134545"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 271,
+        "name": "Бар, Ресторан, Караоке",
+        "address": "Киев, Саксаганского 8 (м.Дворец Спорта)",
+        "location": {
+          "latitude": "50.4363296",
+          "longitude": "30.5187573"
+        },
+        "hot": false,
+        "provider": {
+          "id": 120,
+          "name": "Яблоко",
+          "phone": {
+            "normalized_phone_number": "380975945005"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 347,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/347.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/347_small.jpeg"
+                }
+              },
+              {
+                "id": 348,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/348.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/348_small.jpeg"
+                }
+              },
+              {
+                "id": 349,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/349.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/349_small.jpeg"
+                }
+              },
+              {
+                "id": 350,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/350.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/350_small.jpeg"
+                }
+              },
+              {
+                "id": 351,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/351.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/351_small.jpeg"
+                }
+              },
+              {
+                "id": 352,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/352.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/352_small.jpeg"
+                }
+              },
+              {
+                "id": 353,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/353.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/353_small.jpeg"
+                }
+              },
+              {
+                "id": 354,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/354.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/354_small.jpeg"
+                }
+              },
+              {
+                "id": 355,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/355.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/271/albums/194/355_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 682,
+            "price": 300,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/845ad899460a5d4.jpg",
+            "schedules": []
+          },
+          {
+            "id": 683,
+            "price": 500,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/115ad8994624ce6.jpg",
+            "schedules": []
+          },
+          {
+            "id": 684,
+            "price": 750,
+            "description": "С этим ваучером Вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/45ad899462b17f.jpg",
+            "schedules": []
+          },
+          {
+            "id": 704,
+            "price": 1000,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/271/voucher/45adde50a3b9cc.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "12:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1042,
+        "name": "Кафе",
+        "address": "Киев, ул. Сечевых Стрельцов, 58/2a",
+        "location": {
+          "latitude": "50.4564063",
+          "longitude": "30.4904048"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 838,
+          "name": "Кухня Поллі",
+          "phone": {
+            "normalized_phone_number": "380960729018"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1267,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/11/4d/a0/f2/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/11/4d/a0/f2/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1553,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3703,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5745,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380960729018"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1298,
+        "name": "Ресторан",
+        "address": "Киев, Бассейная улица, 1/2",
+        "location": {
+          "latitude": "50.4418025",
+          "longitude": "30.5227797"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1094,
+          "name": "Кафе Дома",
+          "phone": {
+            "normalized_phone_number": "380939655353"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1523,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/09/54/ef/e7/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/09/54/ef/e7/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1809,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3959,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6001,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380939655353"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1300,
+        "name": "Ресторан",
+        "address": "Киев, ул. Шота Руставели., 26",
+        "location": {
+          "latitude": "50.4379056",
+          "longitude": "30.5181011"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1096,
+          "name": "Al Kaif",
+          "phone": {
+            "normalized_phone_number": "380939499925"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1525,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/10/e8/34/e3/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/10/e8/34/e3/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1811,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3961,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6003,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380939499925"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 277,
+        "name": "Термінал",
+        "address": "Киев, пр. Степана Бандеры, 34B (м.Петровка)",
+        "location": {
+          "latitude": "50.4853152",
+          "longitude": "30.4983392"
+        },
+        "hot": false,
+        "provider": {
+          "id": 103,
+          "name": "Планета Кино",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 362,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/277/albums/200/362.jpg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/277/albums/200/362.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 709,
+            "name": "IMAX",
+            "price": 380,
+            "description": "IMAX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/945abe568586d53.png",
+            "schedules": []
+          },
+          {
+            "id": 710,
+            "name": "4DX",
+            "price": 440,
+            "description": "4DX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/115abe5563e6e00.jpg",
+            "schedules": []
+          },
+          {
+            "id": 711,
+            "name": "RE'LUX",
+            "price": 800,
+            "description": "RE'LUX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/15abe54cd7bfcc.jpg",
+            "schedules": []
+          },
+          {
+            "id": 712,
+            "name": "Cinetech+",
+            "price": 160,
+            "description": "CINETECH+, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/925abe5648ba0ea.jpg",
+            "schedules": [
+              {
+                "date_from": "2018-05-10",
+                "date_to": "2018-05-16",
+                "time_from": "17:45"
+              },
+              {
+                "date_from": "2018-05-10",
+                "date_to": "2018-05-16",
+                "time_from": "19:30"
+              }
+            ]
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {},
+        "planeta_kino_movie_id": 3131,
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 278,
+        "name": "Бар, Ресторан",
+        "address": "Киев, Нижний Вал 19 (м. Контрактовая площадь)",
+        "location": {
+          "latitude": "50.3864029",
+          "longitude": "30.6924041"
+        },
+        "hot": false,
+        "provider": {
+          "id": 121,
+          "name": "Pink Freud",
+          "phone": {
+            "normalized_phone_number": "380509919818"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 363,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/363.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/363_small.jpeg"
+                }
+              },
+              {
+                "id": 364,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/364.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/364_small.jpeg"
+                }
+              },
+              {
+                "id": 365,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/365.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/365_small.jpeg"
+                }
+              },
+              {
+                "id": 366,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/366.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/366_small.jpeg"
+                }
+              },
+              {
+                "id": 367,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/367.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/367_small.jpeg"
+                }
+              },
+              {
+                "id": 368,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/368.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/368_small.jpeg"
+                }
+              },
+              {
+                "id": 369,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/369.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/369_small.jpeg"
+                }
+              },
+              {
+                "id": 370,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/370.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/278/albums/201/370_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 713,
+            "price": 300,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые напитки или блюда.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/55ae19cbed0539.jpg",
+            "schedules": [
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": true,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": true,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": true,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": true,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              }
+            ]
+          },
+          {
+            "id": 714,
+            "price": 500,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые напитки или блюда.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/775ae19cbf09629.jpg",
+            "schedules": [
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": true,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": true,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": true,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": true,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              }
+            ]
+          },
+          {
+            "id": 716,
+            "price": 750,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые напитки или блюда.",
+            "image": "http://i1.namnam.io/namnam-dev/img/278/voucher/605ae19d48b6f77.jpg",
+            "schedules": [
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": true,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": true,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": true,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": true,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              }
+            ]
+          },
+          {
+            "id": 717,
+            "price": 1000,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые напитки или блюда.",
+            "image": "http://i1.namnam.io/namnam-dev/img/278/voucher/635ae19d48c673c.jpg",
+            "schedules": [
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": true,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": false,
+                "wednesday": true,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": false,
+                "tuesday": true,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              },
+              {
+                "time_from": "18:00",
+                "time_to": "01:00",
+                "monday": true,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false,
+                "sunday": false
+              }
+            ]
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "18:00",
+            "time_to": "01:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 279,
+        "name": "Ресторан",
+        "address": "Киев, ул. Хорива 14 (Подол, м. Контрактовая площадь))",
+        "location": {
+          "latitude": "50.46461",
+          "longitude": "30.517116"
+        },
+        "hot": false,
+        "provider": {
+          "id": 122,
+          "name": "\"Місто Лева\"",
+          "phone": {
+            "normalized_phone_number": "380444287545"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 371,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/371.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/371_small.jpeg"
+                }
+              },
+              {
+                "id": 372,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/372.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/372_small.jpeg"
+                }
+              },
+              {
+                "id": 373,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/373.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/373_small.jpeg"
+                }
+              },
+              {
+                "id": 374,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/374.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/374_small.jpeg"
+                }
+              },
+              {
+                "id": 375,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/375.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/375_small.jpeg"
+                }
+              },
+              {
+                "id": 376,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/376.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/376_small.jpeg"
+                }
+              },
+              {
+                "id": 377,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/377.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/279/albums/202/377_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 718,
+            "price": 300,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/279/voucher/745ae1a7c09977b.jpg",
+            "schedules": []
+          },
+          {
+            "id": 719,
+            "price": 500,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/279/voucher/305ae1a7c191da5.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "09:00",
+            "time_to": "23:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "21:00",
+            "time_to": "23:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      }
+    ],
+    "total": 244,
+    "count": 10
+  }
+}

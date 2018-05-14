@@ -1,0 +1,752 @@
+{
+  "success": true,
+  "content": {
+    "items": [
+      {
+        "id": 1318,
+        "name": "Ресторан",
+        "address": "Киев, Пр. Московский, 32",
+        "location": {
+          "latitude": "50.4853438",
+          "longitude": "30.5339323"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1114,
+          "name": "Китайский Ресторан Мандарин",
+          "phone": {
+            "normalized_phone_number": "380442290459"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1543,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0f/a2/f4/18/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0f/a2/f4/18/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1829,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3979,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6021,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380730363636"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 295,
+        "name": "Мастер класс",
+        "address": "Киев, проспект Воздухофлотский 6 (м.Вокзальная, зал фехтования за зданием бассейна ЦСКА)",
+        "location": {
+          "latitude": "50.4438461",
+          "longitude": "30.4747105"
+        },
+        "hot": false,
+        "provider": {
+          "id": 129,
+          "name": "Школа фехтования",
+          "phone": {
+            "normalized_phone_number": "380632245352"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 413,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/413.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/413_small.jpeg"
+                }
+              },
+              {
+                "id": 414,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/414.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/414_small.jpeg"
+                }
+              },
+              {
+                "id": 415,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/415.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/415_small.jpeg"
+                }
+              },
+              {
+                "id": 416,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/416.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/416_small.jpeg"
+                }
+              },
+              {
+                "id": 417,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/417.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/295/albums/218/417_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 756,
+            "price": 1400,
+            "image": "http://i1.namnam.io/namnam-dev/img/295/voucher/335ae5b1d138060.png",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 296,
+        "name": "Урок дайвинга для двоих",
+        "address": "Киев, ул. Сергиенко, 2/3 (м.Черниговская, Дворец Подводного Спорта)",
+        "location": {
+          "latitude": "50.443868",
+          "longitude": "30.630227"
+        },
+        "hot": false,
+        "provider": {
+          "id": 130,
+          "name": "Дайв-клуб \"Katran\"",
+          "phone": {
+            "normalized_phone_number": "380677988531"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 479,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/479.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/479_small.png"
+                }
+              },
+              {
+                "id": 480,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/480.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/480_small.png"
+                }
+              },
+              {
+                "id": 481,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/481.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/481_small.png"
+                }
+              },
+              {
+                "id": 482,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/482.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/296/albums/219/482_small.png"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 781,
+            "price": 1500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1321,
+        "name": "Ресторан",
+        "address": "Киев, ул. Бульварно-Кудрявская, 3",
+        "location": {
+          "latitude": "50.4539861",
+          "longitude": "30.5053614"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1117,
+          "name": "Beeze Restaurant & Karaoke",
+          "phone": {
+            "normalized_phone_number": "380445691010"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1546,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/a0/4d/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0f/5e/a0/4d/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1832,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3982,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6024,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380445691010"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 556,
+        "name": "Ресторан",
+        "address": "Киев, ул. Раисы Окипной, 4А",
+        "location": {
+          "latitude": "50.449614",
+          "longitude": "30.5941924"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 352,
+          "name": "Воки Токи Ресторан Азиатской кухни",
+          "phone": {
+            "normalized_phone_number": "380973039074"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 781,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/10/cd/0e/b2/wokitoki.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/10/cd/0e/b2/wokitoki.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1067,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3217,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5259,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380973039074"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 302,
+        "name": "Святошинская колонна Велодня",
+        "address": "Киев, просп.Победы 97 (м.Святошино)",
+        "location": {
+          "latitude": "50.4568958",
+          "longitude": "30.3805956"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 424,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/302/albums/225/424.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/302/albums/225/424_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 792,
+            "price": 0,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          },
+          {
+            "date_from": "2018-05-21",
+            "date_to": "2018-05-21",
+            "time_from": "09:00",
+            "time_to": "21:00",
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380930001122"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1326,
+        "name": "Кафе",
+        "address": "Киев, пр-т. Героев Сталинграда 6, корп. 6",
+        "location": {
+          "latitude": "50.49483",
+          "longitude": "30.5209464"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1122,
+          "name": "Кушавель",
+          "phone": {
+            "normalized_phone_number": "380442273229"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 2763,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/1326/albums/2197/2763.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/1326/albums/2197/2763_small.jpeg"
+                }
+              },
+              {
+                "id": 2764,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/1326/albums/2197/2764.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/1326/albums/2197/2764_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1837,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3987,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6029,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380442273229"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 303,
+        "name": "Всеукраинский слет коллекционеров виниловых пластинок - KYIV VINYL MUSIC FAIR",
+        "address": "Киев, ул. Жилянская 107 (м.Вокзальная)",
+        "location": {
+          "latitude": "50.4417316",
+          "longitude": "30.4881542"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 425,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/303/albums/226/425.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/303/albums/226/425_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 793,
+            "price": 0,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          },
+          {
+            "date_from": "2018-05-19",
+            "date_to": "2018-05-19",
+            "time_from": "10:00",
+            "time_to": "17:00",
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1071,
+        "name": "Ресторан",
+        "address": "Киев, ул. Сагайдачного, 41",
+        "location": {
+          "latitude": "50.4624602",
+          "longitude": "30.5189963"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 867,
+          "name": "Ноябрь",
+          "phone": {
+            "normalized_phone_number": "380967072525"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1296,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/12/c6/e5/7e/img-20180421-203934-largejpg.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/12/c6/e5/7e/img-20180421-203934-largejpg.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1582,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3732,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5774,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380967072525"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 304,
+        "name": "Выставка Марии Куликовской «Движения свободы»",
+        "address": "Киев,  ул.Набережно-Крещатицкая 10-а (м.Контрактовая площадь) Port creative hub",
+        "location": {
+          "latitude": "50.4706492",
+          "longitude": "30.5244753"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 426,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/304/albums/227/426.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/304/albums/227/426_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 794,
+            "price": 0,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          },
+          {
+            "date_from": "2018-05-08",
+            "date_to": "2018-05-22",
+            "time_from": "14:00",
+            "time_to": "22:00",
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      }
+    ],
+    "total": 244,
+    "count": 10
+  }
+}

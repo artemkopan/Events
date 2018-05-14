@@ -1,8 +1,9 @@
-package com.artemkopan.presentation
+package com.artemkopan.presentation.di
 
 import android.arch.lifecycle.ViewModel
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.base.ViewModelFactory
+import com.artemkopan.presentation.ui.detail.EventDetailViewModel
 import com.artemkopan.presentation.ui.list.EventListViewModel
 import dagger.Binds
 import dagger.Component
@@ -27,8 +28,13 @@ interface ViewModelModule {
     fun bindEventListViewModel(viewModel: EventListViewModel): ViewModel
 
     @Binds
-    fun bindViewModelFactory(factory: ViewModelFactory): android.arch.lifecycle.ViewModelProvider.Factory
+    @IntoMap
+    @ViewModelKey(EventDetailViewModel::class)
+    fun bindEventDetailViewModel(viewModel: EventDetailViewModel): ViewModel
 
+
+    @Binds
+    fun bindViewModelFactory(factory: ViewModelFactory): android.arch.lifecycle.ViewModelProvider.Factory
 
 }
 

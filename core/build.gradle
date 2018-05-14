@@ -2,7 +2,7 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation deps.kotlin.stdlib
+    api deps.kotlin.stdlib
 
     api deps.javax
 

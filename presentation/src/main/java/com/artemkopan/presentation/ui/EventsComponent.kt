@@ -2,8 +2,10 @@ package com.artemkopan.presentation.ui
 
 import com.artemkopan.di.ActivityScope
 import com.artemkopan.di.component.ApplicationProvider
-import com.artemkopan.presentation.ViewModelComponent
-import com.artemkopan.presentation.ViewModelProvider
+import com.artemkopan.presentation.di.ViewModelComponent
+import com.artemkopan.presentation.di.ViewModelProvider
+import com.artemkopan.presentation.ui.detail.EventDetailFragment
+import com.artemkopan.presentation.ui.list.EventListFragment
 import dagger.Component
 import dagger.Module
 
@@ -13,12 +15,16 @@ import dagger.Module
             ApplicationProvider::class, ViewModelProvider::class
         ],
         modules = [EventsActivityModule::class])
-interface EventsActivityComponent {
+interface EventsComponent {
+
     fun inject(activity: EventsActivity)
+    fun inject(activity: EventListFragment)
+    fun inject(eventDetailFragment: EventDetailFragment)
 
     object Initializer {
-        fun init(applicationProvider: ApplicationProvider): EventsActivityComponent {
-            return DaggerEventsActivityComponent.builder()
+        @JvmStatic
+        fun init(applicationProvider: ApplicationProvider): EventsComponent {
+            return DaggerEventsComponent.builder()
                     .viewModelProvider(ViewModelComponent.Initializer.init(applicationProvider))
                     .applicationProvider(applicationProvider)
                     .build()

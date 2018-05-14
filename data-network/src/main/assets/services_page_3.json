@@ -1,0 +1,861 @@
+{
+  "success": true,
+  "content": {
+    "items": [
+      {
+        "id": 280,
+        "name": "Бар",
+        "address": "Киев, Хорива 16/7 (Подол, м.Котрактовая Площадь)",
+        "location": {
+          "latitude": "50.4662071",
+          "longitude": "30.5158558"
+        },
+        "hot": false,
+        "provider": {
+          "id": 123,
+          "name": "Win Bar",
+          "phone": {
+            "normalized_phone_number": "380504247167"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 378,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/378.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/378_small.jpeg"
+                }
+              },
+              {
+                "id": 384,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/384.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/384_small.jpeg"
+                }
+              },
+              {
+                "id": 385,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/385.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/385_small.jpeg"
+                }
+              },
+              {
+                "id": 386,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/386.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/386_small.jpeg"
+                }
+              },
+              {
+                "id": 387,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/387.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/387_small.jpeg"
+                }
+              },
+              {
+                "id": 388,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/388.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/388_small.jpeg"
+                }
+              },
+              {
+                "id": 389,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/389.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/280/albums/203/389_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 720,
+            "price": 300,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/280/voucher/855ae1afa27c503.jpg",
+            "schedules": []
+          },
+          {
+            "id": 721,
+            "price": 500,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/280/voucher/115ae1afa29ae0d.jpg",
+            "schedules": []
+          },
+          {
+            "id": 722,
+            "price": 700,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/280/voucher/65ae1afa2a2b14.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "12:00",
+            "time_to": "00:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 281,
+        "name": "Кубинский ресторан",
+        "address": "Киев, Верхний вал 24 (Подол, м. Контрактовая площадь)",
+        "location": {},
+        "hot": false,
+        "provider": {
+          "id": 124,
+          "name": "Habana",
+          "phone": {
+            "normalized_phone_number": "380957096234"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 390,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/390.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/390_small.png"
+                }
+              },
+              {
+                "id": 391,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/391.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/391_small.jpeg"
+                }
+              },
+              {
+                "id": 392,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/392.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/392_small.jpeg"
+                }
+              },
+              {
+                "id": 393,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/393.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/281/albums/204/393_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 726,
+            "price": 300,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/281/voucher/405ae1bcd9dec0c.jpg",
+            "schedules": []
+          },
+          {
+            "id": 727,
+            "price": 500,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/281/voucher/975ae1bcd9f0f19.jpg",
+            "schedules": []
+          },
+          {
+            "id": 728,
+            "price": 750,
+            "description": "С этим ваучером вы получаете депозит, который можете использовать на свое усмотрение, выбирая любые блюда или напитки.",
+            "image": "http://i1.namnam.io/namnam-dev/img/281/voucher/985ae1bcda05504.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "tuesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "wednesday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "thursday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "friday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "saturday": true,
+            "enabled": true
+          },
+          {
+            "time_from": "11:00",
+            "time_to": "01:00",
+            "sunday": true,
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 282,
+        "name": "Isle of Dogs (мовою оригіналу) (12+)",
+        "address": "Киев, пр. Степана Бандеры, 34B (м.Петровка)",
+        "location": {
+          "latitude": "50.4853152",
+          "longitude": "30.4983392"
+        },
+        "hot": false,
+        "provider": {
+          "id": 103,
+          "name": "Планета Кино",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 396,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/282/albums/205/396.jpg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/282/albums/205/396.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 729,
+            "name": "IMAX",
+            "price": 380,
+            "description": "IMAX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/945abe568586d53.png",
+            "schedules": []
+          },
+          {
+            "id": 730,
+            "name": "4DX",
+            "price": 440,
+            "description": "4DX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/115abe5563e6e00.jpg",
+            "schedules": []
+          },
+          {
+            "id": 731,
+            "name": "RE'LUX",
+            "price": 800,
+            "description": "RE'LUX, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/15abe54cd7bfcc.jpg",
+            "schedules": []
+          },
+          {
+            "id": 732,
+            "name": "Cinetech+",
+            "price": 160,
+            "description": "CINETECH+, 3D",
+            "image": "http://i1.namnam.io/namnam-dev/img/106/voucher/925abe5648ba0ea.jpg",
+            "schedules": [
+              {
+                "date_from": "2018-05-02",
+                "date_to": "2018-05-09",
+                "time_from": "19:30"
+              },
+              {
+                "date_from": "2018-05-10",
+                "date_to": "2018-05-16",
+                "time_from": "19:45"
+              }
+            ]
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {},
+        "planeta_kino_movie_id": 3138,
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1051,
+        "name": "Ресторан",
+        "address": "Киев, ул. Киевская, 198",
+        "location": {
+          "latitude": "50.503558",
+          "longitude": "30.7757579"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 847,
+          "name": "Бістро Пекаря",
+          "phone": {
+            "normalized_phone_number": "380674403090"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1276,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/11/1d/fd/1f/getlstd-property-photo.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/11/1d/fd/1f/getlstd-property-photo.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1562,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3712,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5754,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380674403090"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1052,
+        "name": "Ресторан",
+        "address": "Киев, ул. Антоновича, 72",
+        "location": {
+          "latitude": "50.4271149",
+          "longitude": "30.5138483"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 848,
+          "name": "Shah-Plov",
+          "phone": {
+            "normalized_phone_number": "380682257777"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1277,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0e/99/b0/ad/sahplov.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0e/99/b0/ad/sahplov.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1563,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3713,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5755,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380682257777"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1311,
+        "name": "Ресторан",
+        "address": "Киев, ул. Хорива, 14",
+        "location": {
+          "latitude": "50.4657568",
+          "longitude": "30.5164504"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1107,
+          "name": "BlinStory",
+          "phone": {
+            "normalized_phone_number": "380684945599"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1536,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0e/e1/ab/a8/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0e/e1/ab/a8/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1822,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3972,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6014,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380684945599"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 288,
+        "name": "Мастер класс",
+        "address": "Киев, ул. Михайла Максимовича 3-г (Онуфрия Трутенко 3-г)  (м. Васильковская)",
+        "location": {
+          "latitude": "50.393251",
+          "longitude": "30.48767"
+        },
+        "hot": false,
+        "provider": {
+          "id": 126,
+          "name": "Кулинарная мастерская",
+          "phone": {
+            "normalized_phone_number": "380665196545"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 398,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/398.png",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/398_small.png"
+                }
+              },
+              {
+                "id": 462,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/462.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/462_small.jpeg"
+                }
+              },
+              {
+                "id": 463,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/463.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/463_small.jpeg"
+                }
+              },
+              {
+                "id": 464,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/464.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/288/albums/211/464_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 782,
+            "price": 800,
+            "description": "Итальянская кухня: Равиоли со шпинатом и сыром рикотта, Паста Карбонара, Кросты с соусом песто, Тирамису.  Длительность: 2,5 часа.",
+            "image": "http://i1.namnam.io/namnam-dev/img/288/voucher/135aec677fc61cf.jpg",
+            "schedules": []
+          },
+          {
+            "id": 808,
+            "price": 800,
+            "description": "Французкая кухня. Салат из семги, авокадо и канкасе, Киш Лорен, Луковый суп запеченный с крутонами, Креп Сюзетт “фламбе”.  Длительность: 2,5 часа.",
+            "image": "http://i1.namnam.io/namnam-dev/img/288/voucher/915aec68170f999.jpg",
+            "schedules": []
+          },
+          {
+            "id": 809,
+            "price": 1600,
+            "description": "Молекулярная кухня. 1. Борщ: лук фри, икра из морковного фреша, спагетти из свекольного фреша с бальзамическим уксусом...; 2. Каннеллони фаршированные со\r\nДлительность: 3 часа.",
+            "image": "http://i1.namnam.io/namnam-dev/img/288/voucher/495aec677fedb2d.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "time_from": "10:00",
+            "monday": true,
+            "enabled": true
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1056,
+        "name": "Ресторан",
+        "address": "Киев, 114 Krasnoarmeyskaya Street",
+        "location": {
+          "latitude": "50.4221474",
+          "longitude": "30.5194364"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 852,
+          "name": "Hatinka Restaurant",
+          "phone": {
+            "normalized_phone_number": "380442388615"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1281,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/10/03/45/7e/photo6jpg.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/10/03/45/7e/photo6jpg.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1567,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3717,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5759,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1317,
+        "name": "Ресторан",
+        "address": "Киев, ул. Владимирская, 83",
+        "location": {
+          "latitude": "50.4365759",
+          "longitude": "30.5099253"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1113,
+          "name": "Ресторация 5&9",
+          "phone": {
+            "normalized_phone_number": "380442290880"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1542,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0d/e2/9c/3f/5-9.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0d/e2/9c/3f/5-9.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1828,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3978,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6020,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380674044041"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 294,
+        "name": "Мастер-класс живописи",
+        "address": "Киев,  ул. Ярославская 4-Б (м. Контрактовая площадь)",
+        "location": {
+          "latitude": "50.46461",
+          "longitude": "30.517116"
+        },
+        "hot": false,
+        "provider": {
+          "id": 128,
+          "name": "Enjoy Art",
+          "phone": {
+            "normalized_phone_number": "380988381482"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 409,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/409.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/409_small.jpeg"
+                }
+              },
+              {
+                "id": 410,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/410.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/410_small.jpeg"
+                }
+              },
+              {
+                "id": 411,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/411.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/411_small.jpeg"
+                }
+              },
+              {
+                "id": 412,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/412.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/294/albums/217/412_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 3038,
+            "price": 800,
+            "description": "Живопись для двоих\r\nучаствуют два человека :) \r\nДлительность 2,5-3 часа\r\nВсе материалы включены в стоимость.",
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      }
+    ],
+    "total": 244,
+    "count": 10
+  }
+}

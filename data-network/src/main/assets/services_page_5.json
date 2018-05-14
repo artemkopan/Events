@@ -1,0 +1,709 @@
+{
+  "success": true,
+  "content": {
+    "items": [
+      {
+        "id": 305,
+        "name": "Что говорит слово youthquake о 2018?",
+        "address": "Киев,ул. Лаврская 12  (м.Арсенальная) Художественный Арсенал",
+        "location": {
+          "latitude": "50.4444465",
+          "longitude": "30.5454041"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 427,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/305/albums/228/427.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/305/albums/228/427_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 795,
+            "price": 0,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          },
+          {
+            "date_from": "2018-05-30",
+            "date_to": "2018-05-30",
+            "time_from": "20:00",
+            "time_to": "21:30",
+            "enabled": true
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1330,
+        "name": "Бар",
+        "address": "Киев, ул. Ивана Мазепы. 18/29",
+        "location": {
+          "latitude": "50.4405381",
+          "longitude": "30.5495798"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1126,
+          "name": "Wake CUP Bar",
+          "phone": {
+            "normalized_phone_number": "380634636060"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1555,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0b/cf/73/bf/so-cozy-3.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0b/cf/73/bf/so-cozy-3.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1841,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3991,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6033,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380634636060"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1075,
+        "name": "Ресторан",
+        "address": "Киев, ул. Кожемяцкая, 10А",
+        "location": {
+          "latitude": "50.4612552",
+          "longitude": "30.5079295"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 871,
+          "name": "Mulan",
+          "phone": {
+            "normalized_phone_number": "380737773435"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1300,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/10/a2/c5/c2/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/10/a2/c5/c2/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1586,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3736,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5778,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380737773435"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1079,
+        "name": "Ресторан",
+        "address": "Киев, Григоровича-Барского, 1",
+        "location": {
+          "latitude": "50.409492",
+          "longitude": "30.39142"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 875,
+          "name": "Стейкбургер",
+          "phone": {
+            "normalized_phone_number": "380443399232"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1304,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/11/ab/7b/72/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/11/ab/7b/72/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1590,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3740,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5782,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380443399232"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1080,
+        "name": "Ресторан",
+        "address": "Киев, Жилянская 101",
+        "location": {
+          "latitude": "50.4457912",
+          "longitude": "30.4869167"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 876,
+          "name": "S bar by SMOKY",
+          "phone": {
+            "normalized_phone_number": "380960119911"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1305,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0f/1a/28/04/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0f/1a/28/04/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1591,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3741,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5783,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380960119911"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1081,
+        "name": "Ресторан",
+        "address": "Киев, ул. Княжий затон 21",
+        "location": {
+          "latitude": "50.4007178",
+          "longitude": "30.6166267"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 877,
+          "name": "Кушавель",
+          "phone": {
+            "normalized_phone_number": "380674431720"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1306,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/09/4f/5d/ec/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/09/4f/5d/ec/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1592,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3742,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5784,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380674431720"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 314,
+        "name": "Прогулка в Парке Киото",
+        "address": "Киев,ул. Киото 21 (м.Лесная)",
+        "location": {
+          "latitude": "50.46636",
+          "longitude": "30.64128"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 436,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/436.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/436_small.jpeg"
+                }
+              },
+              {
+                "id": 437,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/437.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/437_small.jpeg"
+                }
+              },
+              {
+                "id": 438,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/438.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/438_small.jpeg"
+                }
+              },
+              {
+                "id": 439,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/439.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/439_small.jpeg"
+                }
+              },
+              {
+                "id": 440,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/440.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/314/albums/237/440_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 774,
+            "price": 0,
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/485ae98a6d6c783.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 1338,
+        "name": "Паб",
+        "address": "Киев, ул. Кириловская 109/2",
+        "location": {
+          "latitude": "50.486269",
+          "longitude": "30.4719073"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 1134,
+          "name": "Вудди паб",
+          "phone": {
+            "normalized_phone_number": "380444682298"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 1563,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0e/25/11/95/img-20161207-140900-hdr.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0e/25/11/95/img-20161207-140900-hdr.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1849,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3999,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 6041,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380444682298"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 315,
+        "name": "Велосипедная прогулка в Парке Киото",
+        "address": "улица Киото, 21, Киев",
+        "location": {
+          "latitude": "50.46636",
+          "longitude": "30.64128"
+        },
+        "hot": false,
+        "provider": {
+          "id": 131,
+          "name": "Бесплатно",
+          "phone": {}
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 441,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/441.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/441_small.jpeg"
+                }
+              },
+              {
+                "id": 442,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/442.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/442_small.jpeg"
+                }
+              },
+              {
+                "id": 443,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/443.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/443_small.jpeg"
+                }
+              },
+              {
+                "id": 444,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/444.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/444_small.jpeg"
+                }
+              },
+              {
+                "id": 445,
+                "original": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/445.jpeg",
+                "thumbnails": {
+                  "small": "http://i1.namnam.io/namnam-dev/img/providerservices/315/albums/238/445_small.jpeg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 775,
+            "price": 0,
+            "description": "Пригласите на прогулку по одному из лучших парков Киева. Насладитесь атмосферой и отдохните с приятным человеком.",
+            "image": "http://i1.namnam.io/namnam-dev/img//voucher/375ae98bc98c688.jpg",
+            "schedules": []
+          }
+        ],
+        "schedules": [
+          {
+            "monday": true,
+            "enabled": false
+          },
+          {
+            "tuesday": true,
+            "enabled": false
+          },
+          {
+            "wednesday": true,
+            "enabled": false
+          },
+          {
+            "thursday": true,
+            "enabled": false
+          },
+          {
+            "friday": true,
+            "enabled": false
+          },
+          {
+            "saturday": true,
+            "enabled": false
+          },
+          {
+            "sunday": true,
+            "enabled": false
+          }
+        ],
+        "deleted": false,
+        "phone": {},
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      },
+      {
+        "id": 571,
+        "name": "Ресторан",
+        "address": "Киев, ул. Ильинская 20",
+        "location": {
+          "latitude": "50.465738",
+          "longitude": "30.523823"
+        },
+        "user_price": true,
+        "hot": false,
+        "provider": {
+          "id": 367,
+          "name": "Коло Веганский Ресторан",
+          "phone": {
+            "normalized_phone_number": "380987564513"
+          }
+        },
+        "albums": [
+          {
+            "photos": [
+              {
+                "id": 796,
+                "original": "https://media-cdn.tripadvisor.com/media/photo-s/0f/ba/34/3b/caption.jpg",
+                "thumbnails": {
+                  "small": "https://media-cdn.tripadvisor.com/media/photo-s/0f/ba/34/3b/caption.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "vouchers": [
+          {
+            "id": 1082,
+            "price": 300,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 3232,
+            "price": 200,
+            "image": "",
+            "schedules": []
+          },
+          {
+            "id": 5274,
+            "price": 500,
+            "image": "",
+            "schedules": []
+          }
+        ],
+        "schedules": [],
+        "deleted": false,
+        "phone": {
+          "normalized_phone_number": "380987564513"
+        },
+        "creatiion_deadline": 2,
+        "cancellation_policy_early": 0.85,
+        "cancellation_policy_middle": 0.5,
+        "cancellation_policy_late": 0.2
+      }
+    ],
+    "total": 244,
+    "count": 10
+  }
+}

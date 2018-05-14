@@ -1,7 +1,9 @@
 package com.artemkopan.di.component
 
-import com.artemkopan.core.data.events.EventsInteractor
-import com.artemkopan.core.data.events.EventsInteractorImpl
+import com.artemkopan.core.data.events.detail.EventDetailInteractor
+import com.artemkopan.core.data.events.detail.EventDetailInteractorImpl
+import com.artemkopan.core.data.events.list.EventListInteractor
+import com.artemkopan.core.data.events.list.EventListInteractorImpl
 import dagger.Binds
 import dagger.Component
 import dagger.Module
@@ -9,7 +11,9 @@ import dagger.Module
 
 interface InteractorProvider {
 
-    fun provideEventsInteractor(): EventsInteractor
+    fun provideEventListInteractor(): EventListInteractor
+
+    fun provideEventDetailInteractor(): EventDetailInteractor
 
 }
 
@@ -17,8 +21,10 @@ interface InteractorProvider {
 interface InteractorModule {
 
     @Binds
-    fun bindEventsInteractor(impl: EventsInteractorImpl): EventsInteractor
+    fun bindEventsInteractor(impl: EventListInteractorImpl): EventListInteractor
 
+    @Binds
+    fun bindEventDetailInteractor(impl: EventDetailInteractorImpl): EventDetailInteractor
 }
 
 @Component(

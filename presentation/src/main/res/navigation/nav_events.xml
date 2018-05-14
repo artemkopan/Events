@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@id/eventListFragment">
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.artemkopan.presentation.ui.list.EventListFragment"
+        android:label="EventListFragment">
+        <action
+            android:id="@+id/actionEventDetail"
+            app:destination="@id/eventDetailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.artemkopan.presentation.ui.detail.EventDetailFragment"
+        android:label="EventDetailFragment"/>
+
+</navigation>
