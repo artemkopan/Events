@@ -1,1 +1,5 @@
-include ':app', ':data-repo', ':core', ':presentation', ':data-network', ':di'
+include ':app',
+        ':di',
+        ':presentation',
+        ':data-repo', ':data-network',
+        ':core', ':core-interactor'

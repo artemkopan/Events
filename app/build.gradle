@@ -29,6 +29,7 @@ dependencies {
     implementation project(':data-repo')
     implementation project(':data-network')
     implementation project(':core')
+    implementation project(':core-interactor')
     implementation project(':presentation')
 
     implementation deps.timber

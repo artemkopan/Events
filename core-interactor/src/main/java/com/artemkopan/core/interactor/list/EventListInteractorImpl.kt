@@ -1,6 +1,7 @@
-package com.artemkopan.core.data.events.list
+package com.artemkopan.core.interactor.list
 
 import com.artemkopan.core.data.events.EventsNetworkClient
+import com.artemkopan.core.data.events.list.EventListInteractor
 import com.artemkopan.core.entity.EventEntity
 import io.reactivex.Single
 import javax.inject.Inject
