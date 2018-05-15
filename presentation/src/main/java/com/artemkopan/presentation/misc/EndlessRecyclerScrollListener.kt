@@ -44,7 +44,7 @@ abstract class EndlessRecyclerScrollListener(private val layoutManager: Recycler
     // This happens many TIMES a second during a scroll, so be wary of the code you place here.
     // We are given a few useful parameters to help us work out if we need to load some more data,
     // but first we check if we are waiting for the previous load to finish.
-    override fun onScrolled(view: RecyclerView?, dx: Int, dy: Int) {
+    override fun onScrolled(view: RecyclerView, dx: Int, dy: Int) {
         if (!isEnable) return
         var lastVisibleItemPosition = 0
         val totalItemCount = layoutManager.itemCount

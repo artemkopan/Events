@@ -47,7 +47,7 @@ class SpaceItemDecoration : RecyclerView.ItemDecoration {
         }
 
         if (!addLast) {
-            if (position != parent.adapter.itemCount - 1) {
+            if (position != parent.adapter!!.itemCount - 1) {
                 if (isHorizontal) {
                     outRect.right = spacing
                 } else {
