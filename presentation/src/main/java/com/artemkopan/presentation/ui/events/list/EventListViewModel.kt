@@ -1,4 +1,4 @@
-package com.artemkopan.presentation.ui.list
+package com.artemkopan.presentation.ui.events.list
 
 import com.artemkopan.core.data.events.list.EventListInteractor
 import com.artemkopan.core.entity.EventEntity

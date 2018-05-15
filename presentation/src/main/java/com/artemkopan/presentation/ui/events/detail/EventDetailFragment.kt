@@ -1,4 +1,4 @@
-package com.artemkopan.presentation.ui.detail
+package com.artemkopan.presentation.ui.events.detail
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
 import com.artemkopan.presentation.base.Injectable
-import com.artemkopan.presentation.ui.EventsComponent
+import com.artemkopan.presentation.ui.events.EventsComponent
 
 class EventDetailFragment : BaseFragment<EventDetailViewModel>(), Injectable {
     override fun inject(appProvider: ApplicationProvider) {

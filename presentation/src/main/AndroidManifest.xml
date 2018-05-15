@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".ui.EventsActivity"
+            android:name=".ui.events.EventsActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

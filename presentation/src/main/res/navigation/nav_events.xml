@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/eventListFragment"
-        android:name="com.artemkopan.presentation.ui.list.EventListFragment"
+        android:name="com.artemkopan.presentation.ui.events.list.EventListFragment"
         android:label="EventListFragment">
         <action
             android:id="@+id/actionEventDetail"
@@ -13,7 +13,7 @@
     </fragment>
     <fragment
         android:id="@+id/eventDetailFragment"
-        android:name="com.artemkopan.presentation.ui.detail.EventDetailFragment"
+        android:name="com.artemkopan.presentation.ui.events.detail.EventDetailFragment"
         android:label="EventDetailFragment"/>
 
 </navigation>

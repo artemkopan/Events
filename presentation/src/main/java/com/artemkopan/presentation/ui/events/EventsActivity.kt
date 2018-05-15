@@ -1,4 +1,4 @@
-package com.artemkopan.presentation.ui
+package com.artemkopan.presentation.ui.events
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

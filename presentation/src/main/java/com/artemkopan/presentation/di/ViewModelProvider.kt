@@ -3,8 +3,8 @@ package com.artemkopan.presentation.di
 import android.arch.lifecycle.ViewModel
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.base.ViewModelFactory
-import com.artemkopan.presentation.ui.detail.EventDetailViewModel
-import com.artemkopan.presentation.ui.list.EventListViewModel
+import com.artemkopan.presentation.ui.events.detail.EventDetailViewModel
+import com.artemkopan.presentation.ui.events.list.EventListViewModel
 import dagger.Binds
 import dagger.Component
 import dagger.MapKey
