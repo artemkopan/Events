@@ -1,7 +1,7 @@
 package com.artemkopan.presentation.ui.events
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.Injectable

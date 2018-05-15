@@ -5,8 +5,8 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
-import android.support.annotation.DrawableRes
-import android.support.annotation.Px
+import androidx.annotation.DrawableRes
+import androidx.annotation.Px
 import android.widget.ImageView
 import com.artemkopan.presentation.R
 import com.bumptech.glide.Glide
@@ -131,7 +131,7 @@ sealed class GlideSource {
     class Context(val context: android.content.Context) : GlideSource()
     class View(val view: android.view.View) : GlideSource()
     class Activity(val activity: android.app.Activity) : GlideSource()
-    class Fragment(val fragment: android.support.v4.app.Fragment) : GlideSource()
+    class Fragment(val fragment: androidx.fragment.app.Fragment) : GlideSource()
 }
 
 sealed class GlideHolder {

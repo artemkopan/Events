@@ -1,8 +1,8 @@
 package com.artemkopan.presentation.misc
 
 import android.graphics.Rect
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.State
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.State
 import android.view.View
 
 @Suppress("unused")
@@ -35,7 +35,7 @@ class SpaceItemDecoration : RecyclerView.ItemDecoration {
         this.addLast = addLast
     }
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State?) {
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
         val position = parent.getChildAdapterPosition(view)
 
         if (position == 0 && addFirst) {
@@ -47,7 +47,7 @@ class SpaceItemDecoration : RecyclerView.ItemDecoration {
         }
 
         if (!addLast) {
-            if (position != parent.adapter.itemCount - 1) {
+            if (position != parent.adapter!!.itemCount - 1) {
                 if (isHorizontal) {
                     outRect.right = spacing
                 } else {

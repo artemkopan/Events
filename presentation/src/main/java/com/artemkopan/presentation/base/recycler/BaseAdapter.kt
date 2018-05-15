@@ -1,10 +1,10 @@
 package com.artemkopan.presentation.base.recycler
 
-import android.support.v7.recyclerview.extensions.AsyncDifferConfig
-import android.support.v7.recyclerview.extensions.ListAdapter
-import android.support.v7.util.DiffUtil
+import androidx.recyclerview.widget.DiffUtil
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncDifferConfig
+import androidx.recyclerview.widget.ListAdapter
 import kotlin.properties.Delegates
 
 @Suppress("unused", "MemberVisibilityCanBePrivate")

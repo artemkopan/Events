@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion build_versions.target_sdk
+    compileSdkVersion build_versions.compile_sdk
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
@@ -14,7 +14,7 @@ android {
         targetSdkVersion build_versions.target_sdk
         versionCode build_versions.versionCode
         versionName build_versions.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -33,7 +33,7 @@ dependencies {
     implementation project(':presentation')
 
     implementation deps.timber
-    implementation deps.support.app_compat
+    implementation deps.androidx.fragment
     implementation deps.lifecycle.extensions
 
 

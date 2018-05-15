@@ -1,6 +1,6 @@
 package com.artemkopan.presentation.di
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.base.ViewModelFactory
 import com.artemkopan.presentation.ui.events.detail.EventDetailViewModel
@@ -15,7 +15,7 @@ import kotlin.reflect.KClass
 
 interface ViewModelProvider {
 
-    fun provideViewModelFactory(): android.arch.lifecycle.ViewModelProvider.Factory
+    fun provideViewModelFactory(): androidx.lifecycle.ViewModelProvider.Factory
 
 }
 
@@ -34,7 +34,7 @@ interface ViewModelModule {
 
 
     @Binds
-    fun bindViewModelFactory(factory: ViewModelFactory): android.arch.lifecycle.ViewModelProvider.Factory
+    fun bindViewModelFactory(factory: ViewModelFactory): androidx.lifecycle.ViewModelProvider.Factory
 
 }
 

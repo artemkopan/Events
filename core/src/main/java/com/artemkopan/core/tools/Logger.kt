@@ -1,6 +1,6 @@
 package com.artemkopan.core.tools
 
-import android.support.annotation.IntDef
+import androidx.annotation.IntDef
 
 @Suppress("unused")
 object Logger {

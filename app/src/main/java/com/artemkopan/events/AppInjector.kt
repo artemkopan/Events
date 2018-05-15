@@ -4,9 +4,9 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import com.artemkopan.core.tools.Logger
 import com.artemkopan.presentation.base.Injectable
 
@@ -53,15 +53,15 @@ class AppInjector(private val application: EventsApp) {
             Logger.i("Your activity doesn't injectable %s.\n" +
                     "Implement Injectable interface if you want injectable activity ")
         }
-        if (activity is FragmentActivity) {
+        if (activity is androidx.fragment.app.FragmentActivity) {
             activity.supportFragmentManager
                     .registerFragmentLifecycleCallbacks(fragmentLifecycleCallbacks(), true)
         }
     }
 
-    private fun fragmentLifecycleCallbacks(): FragmentManager.FragmentLifecycleCallbacks {
-        return object : FragmentManager.FragmentLifecycleCallbacks() {
-            override fun onFragmentPreAttached(fm: FragmentManager?, f: Fragment?, context: Context?) {
+    private fun fragmentLifecycleCallbacks(): androidx.fragment.app.FragmentManager.FragmentLifecycleCallbacks {
+        return object : androidx.fragment.app.FragmentManager.FragmentLifecycleCallbacks() {
+            override fun onFragmentPreAttached(fm: androidx.fragment.app.FragmentManager, f: androidx.fragment.app.Fragment, context: Context) {
                 if (f is Injectable) {
                     f.inject(application.applicationProvider)
                 } else {

@@ -2,9 +2,9 @@ package com.artemkopan.presentation.extensions
 
 import android.content.Context
 import android.content.res.Resources
-import android.support.annotation.*
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
+import androidx.annotation.*
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
 
 infix fun Context.color(@ColorRes colorRes: Int) = ContextCompat.getColor(this, colorRes)
 infix fun Context.dimen(@DimenRes dimenRes: Int) = resources.getDimensionPixelSize(dimenRes)
@@ -15,7 +15,7 @@ infix fun Context.drawable(@DrawableRes drawableRes: Int) = ContextCompat.getDra
 infix fun Resources.dimen(@DimenRes dimenRes: Int) = this.getDimensionPixelSize(dimenRes)
 infix fun Resources.string(@StringRes stringRes: Int) = this.getString(stringRes)!!
 
-infix fun Fragment.color(@ColorRes colorRes: Int) = ContextCompat.getColor(this.context!!, colorRes)
-infix fun Fragment.dimen(@DimenRes dimenRes: Int) = resources.getDimensionPixelSize(dimenRes)
-infix fun Fragment.string(@StringRes stringRes: Int) = resources.getString(stringRes)!!
-infix fun Fragment.drawable(@DrawableRes drawableRes: Int) = ContextCompat.getDrawable(this.context!!, drawableRes)!!
+infix fun androidx.fragment.app.Fragment.color(@ColorRes colorRes: Int) = ContextCompat.getColor(this.context!!, colorRes)
+infix fun androidx.fragment.app.Fragment.dimen(@DimenRes dimenRes: Int) = resources.getDimensionPixelSize(dimenRes)
+infix fun androidx.fragment.app.Fragment.string(@StringRes stringRes: Int) = resources.getString(stringRes)!!
+infix fun androidx.fragment.app.Fragment.drawable(@DrawableRes drawableRes: Int) = ContextCompat.getDrawable(this.context!!, drawableRes)!!

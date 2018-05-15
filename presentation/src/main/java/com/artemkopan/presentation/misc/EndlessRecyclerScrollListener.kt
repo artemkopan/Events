@@ -1,13 +1,13 @@
 package com.artemkopan.presentation.misc
 
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 @Suppress("MemberVisibilityCanBePrivate", "unused")
 abstract class EndlessRecyclerScrollListener(private val layoutManager: RecyclerView.LayoutManager)
-    : RecyclerView.OnScrollListener() {
+    : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
 
     // The minimum amount of items to have below your current scroll position
     // before loading more.
@@ -44,19 +44,19 @@ abstract class EndlessRecyclerScrollListener(private val layoutManager: Recycler
     // This happens many TIMES a second during a scroll, so be wary of the code you place here.
     // We are given a few useful parameters to help us work out if we need to load some more data,
     // but first we check if we are waiting for the previous load to finish.
-    override fun onScrolled(view: RecyclerView?, dx: Int, dy: Int) {
+    override fun onScrolled(view: RecyclerView, dx: Int, dy: Int) {
         if (!isEnable) return
         var lastVisibleItemPosition = 0
         val totalItemCount = layoutManager.itemCount
 
         when (layoutManager) {
-            is StaggeredGridLayoutManager -> {
+            is androidx.recyclerview.widget.StaggeredGridLayoutManager -> {
                 val lastVisibleItemPositions = layoutManager.findLastVisibleItemPositions(null)
                 // get maximum element within the list
                 lastVisibleItemPosition = getLastVisibleItem(lastVisibleItemPositions)
             }
-            is LinearLayoutManager -> lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
-            is GridLayoutManager -> lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
+            is androidx.recyclerview.widget.LinearLayoutManager -> lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
+            is androidx.recyclerview.widget.GridLayoutManager -> lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
         }
 
         // If the total item count is zero and the previous isn't, assume the

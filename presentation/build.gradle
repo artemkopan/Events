@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion build_versions.target_sdk
+    compileSdkVersion build_versions.compile_sdk
 
     defaultConfig {
         minSdkVersion build_versions.min_sdk
@@ -34,16 +34,19 @@ dependencies {
 
     implementation deps.rx_android
 
-    implementation deps.support.app_compat
-    implementation deps.support.recyclerview
-    implementation deps.support.design
+    implementation deps.androidx.fragment
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraint_layout
+    implementation deps.androidx.design
+
+//    implementation "com.android.support:appcompat-v7:28.0.0-alpha1"  //todo remove this after navigation will be fixed
+
+    implementation deps.lifecycle.extensions
 
     implementation deps.navigation.runtime
     implementation deps.navigation.fragment
 
-    implementation deps.constraint_layout
-
-    implementation deps.lifecycle.extensions
 
     implementation deps.glide.runtime
 }

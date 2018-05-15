@@ -1,6 +1,6 @@
 package com.artemkopan.presentation.base.recycler
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import kotlinx.android.extensions.CacheImplementation
 import kotlinx.android.extensions.ContainerOptions
@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.*
 // An each inherit holder creates new cache map
 @ContainerOptions(CacheImplementation.NO_CACHE)
 abstract class BaseHolder<T>(override val containerView: View)
-    : RecyclerView.ViewHolder(containerView), LayoutContainer {
+    : androidx.recyclerview.widget.RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     abstract fun bind(item: T)
 
