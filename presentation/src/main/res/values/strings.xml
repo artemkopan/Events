@@ -1,6 +1,11 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">presentation</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="reviews"><xliff:g example="24" id="reviews_count">%1$d</xliff:g> reviews</string>
+
+
 </resources>

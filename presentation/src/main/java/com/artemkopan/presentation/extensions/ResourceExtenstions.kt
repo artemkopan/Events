@@ -9,6 +9,8 @@ import android.support.v4.content.ContextCompat
 infix fun Context.color(@ColorRes colorRes: Int) = ContextCompat.getColor(this, colorRes)
 infix fun Context.dimen(@DimenRes dimenRes: Int) = resources.getDimensionPixelSize(dimenRes)
 infix fun Context.string(@StringRes stringRes: Int) = resources.getString(stringRes)!!
+fun Context.string(@StringRes stringRes: Int, args: Any) = resources.getString(stringRes, args)!!
+fun Context.string(@StringRes stringRes: Int, args: Array<Any>) = resources.getString(stringRes, args)!!
 infix fun Context.stringArray(@ArrayRes stringRes: Int): Array<out String> = resources.getStringArray(stringRes)!!
 infix fun Context.drawable(@DrawableRes drawableRes: Int) = ContextCompat.getDrawable(this, drawableRes)!!
 

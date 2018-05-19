@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance"/>
+
+
+    <style name="RatingBar"/>
+
+    <style name="RatingBar.Theme" parent="@style/AppTheme">
+        <item name="colorAccent">@color/colorOrange</item>
+    </style>
+
+</resources>

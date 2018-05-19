@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/eventsBackground">
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/event_item_space"
+        android:layout_marginEnd="@dimen/event_item_space"
+        android:layout_marginBottom="@dimen/event_item_space"
+        android:background="@drawable/bg_item_event_content"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintBottom_toBottomOf="@+id/previewImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/previewImageView"
+        app:layout_constraintTop_toTopOf="@+id/previewImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="@dimen/event_item_space"
+        android:layout_marginTop="@dimen/event_item_space"
+        android:layout_marginBottom="@dimen/event_item_space"
+        android:background="@drawable/bg_transparent_corner"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/bookmarkButton"
+        style="@style/Event.List.Widget.Button"
+        android:layout_marginTop="@dimen/event_item_space"
+        android:layout_marginEnd="@dimen/event_item_space"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundView"
+        app:layout_constraintTop_toTopOf="@id/backgroundView"
+        app:srcCompat="@drawable/ic_bookmark_border_grey_16dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/shareButton"
+        style="@style/Event.List.Widget.Button"
+        android:layout_marginBottom="@dimen/event_item_space"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundView"
+        app:layout_constraintEnd_toEndOf="@+id/bookmarkButton"
+        app:srcCompat="@drawable/ic_share_grey_16dp" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space2x"
+        android:layout_marginEnd="@dimen/space2x"
+        android:ellipsize="end"
+        android:fontFamily="@font/noto_sans"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:translationZ="@dimen/elevation_small"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarkButton"
+        app:layout_constraintStart_toEndOf="@id/previewImageView"
+        app:layout_constraintTop_toBottomOf="@+id/providerTextView"
+        tools:layout_editor_absoluteY="24dp"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/providerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:textColor="@color/colorGrey"
+        android:translationZ="@dimen/elevation_small"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toTopOf="@+id/bookmarkButton"
+        tools:text="@tools:sample/full_names" />
+
+
+    <TextView
+        android:id="@+id/reviewsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space1x"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:textColor="@color/colorGrey"
+        android:translationZ="@dimen/elevation_small"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/ratingBar"
+        tools:text="@string/reviews" />
+
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:theme="@style/RatingBar.Theme"
+        android:translationZ="@dimen/elevation_small"
+        app:layout_constraintBottom_toBottomOf="@id/shareButton"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toTopOf="@+id/ratingTextView"
+        tools:max="5"
+        tools:rating="3" />
+
+
+</android.support.constraint.ConstraintLayout>

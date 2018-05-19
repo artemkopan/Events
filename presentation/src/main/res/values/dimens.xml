@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_100">100dp</dimen>
+
+    <dimen name="elevation_medium">6dp</dimen>
+    <dimen name="elevation_small">3dp</dimen>
+
 
     <dimen name="space0.5x">2dp</dimen>
     <dimen name="space1x">4dp</dimen>
     <dimen name="space1.5x">6dp</dimen>
     <dimen name="space2x">8dp</dimen>
+    <dimen name="space2.5x">10dp</dimen>
+    <dimen name="space3x">12dp</dimen>
     <dimen name="space4x">16dp</dimen>
 
 

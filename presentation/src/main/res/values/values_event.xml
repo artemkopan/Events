@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="event_item_space">@dimen/space2x</dimen>
+
+
+    <style name="Event" />
+
+    <style name="Event.List" />
+
+    <style name="Event.List.Widget" />
+
+
+    <style name="Event.List.Widget.Button">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:translationZ">@dimen/elevation_medium</item>
+        <item name="android:background">@drawable/bg_circle_grey</item>
+        <item name="android:outlineProvider">none</item>
+        <item name="android:padding">@dimen/space1x</item>
+        <item name="android:stateListAnimator">@animator/shadow_state_list</item>
+        <item name="layout_constraintDimensionRatio">w,1:1</item>
+    </style>
+
+
+</resources>

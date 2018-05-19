@@ -20,6 +20,7 @@ class EventMapper(private val providerEntity: ProviderEntity,
                 name,
                 locationEntity,
                 hot,
+                if (photos.isNotEmpty()) photos[0].small ?: "" else "",
                 photos
         )
     }

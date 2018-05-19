@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventsRecyclerView"
     android:layout_width="match_parent"
+    android:background="@color/eventsBackground"
     android:layout_height="match_parent"
-    android:background="@color/colorAccentGreen">
+    tools:listitem="@layout/item_event">
 
 
-    <Button
-        android:id="@+id/nextBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"/>
-
-</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.RecyclerView>

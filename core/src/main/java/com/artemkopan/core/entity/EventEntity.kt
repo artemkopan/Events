@@ -7,5 +7,6 @@ data class EventEntity(
         val name: String?,
         val location: LocationEntity?,
         val hot: Boolean?,
+        val thumbnail : String,
         val photos: List<PhotoEntity>?
 )

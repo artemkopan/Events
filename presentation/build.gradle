@@ -46,4 +46,6 @@ dependencies {
     implementation deps.lifecycle.extensions
 
     implementation deps.glide.runtime
+
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
 }
