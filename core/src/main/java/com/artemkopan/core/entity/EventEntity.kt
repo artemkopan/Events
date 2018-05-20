@@ -5,8 +5,6 @@ data class EventEntity(
         val address: String?,
         val provider: ProviderEntity?,
         val name: String?,
-        val location: LocationEntity?,
         val hot: Boolean?,
-        val thumbnail : String,
-        val photos: List<PhotoEntity>?
+        val thumbnail: String
 )

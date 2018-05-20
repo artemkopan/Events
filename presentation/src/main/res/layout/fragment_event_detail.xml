@@ -1,12 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:fitsSystemWindows="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_left_arrow_white_24dp" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.design.circularreveal.cardview.CircularRevealCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="111"/>
+        android:layout_marginStart="@dimen/space4x"
+        android:layout_marginEnd="@dimen/space4x"
+        android:layout_marginBottom="@dimen/space4x"
+        android:layout_gravity="center_horizontal"
+        app:behavior_overlapTop="120dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/corner_radius_medium"
+        app:cardElevation="@dimen/elevation_small"
+        app:contentPadding="@dimen/space4x"
+        app:cardMaxElevation="@dimen/elevation_medium"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</android.support.constraint.ConstraintLayout>
+        <include layout="@layout/layout_event_detail_content" />
+
+    </android.support.design.circularreveal.cardview.CircularRevealCardView>
+
+
+</android.support.design.widget.CoordinatorLayout>

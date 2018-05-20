@@ -10,9 +10,9 @@
         android:id="@+id/backgroundView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/event_item_space"
+        android:layout_marginBottom="@dimen/space1x"
         android:layout_marginEnd="@dimen/event_item_space"
-        android:layout_marginBottom="@dimen/event_item_space"
+        android:layout_marginTop="@dimen/space1x"
         android:background="@drawable/bg_item_event_content"
         android:elevation="@dimen/elevation_small"
         app:layout_constraintBottom_toBottomOf="@+id/previewImageView"
@@ -26,11 +26,12 @@
         android:id="@+id/previewImageView"
         android:layout_width="0dp"
         android:layout_height="120dp"
+        android:layout_marginBottom="@dimen/event_item_space"
         android:layout_marginStart="@dimen/event_item_space"
         android:layout_marginTop="@dimen/event_item_space"
-        android:layout_marginBottom="@dimen/event_item_space"
-        android:background="@drawable/bg_transparent_corner"
+        android:background="@drawable/bg_grey_corner"
         android:elevation="@dimen/elevation_small"
+        android:translationZ="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,1:1.2"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +42,8 @@
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/bookmarkButton"
         style="@style/Event.List.Widget.Button"
-        android:layout_marginTop="@dimen/event_item_space"
         android:layout_marginEnd="@dimen/event_item_space"
+        android:layout_marginTop="@dimen/event_item_space"
         app:layout_constraintEnd_toEndOf="@+id/backgroundView"
         app:layout_constraintTop_toTopOf="@id/backgroundView"
         app:srcCompat="@drawable/ic_bookmark_border_grey_16dp"
@@ -60,17 +61,15 @@
         android:id="@+id/titleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space2x"
         android:layout_marginEnd="@dimen/space2x"
+        android:layout_marginStart="@dimen/space2x"
         android:ellipsize="end"
-        android:fontFamily="@font/noto_sans"
         android:maxLines="2"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:translationZ="@dimen/elevation_small"
         app:layout_constraintEnd_toStartOf="@+id/bookmarkButton"
         app:layout_constraintStart_toEndOf="@id/previewImageView"
         app:layout_constraintTop_toBottomOf="@+id/providerTextView"
-        tools:layout_editor_absoluteY="24dp"
         tools:text="@tools:sample/lorem/random" />
 
     <TextView
@@ -84,6 +83,23 @@
         app:layout_constraintStart_toStartOf="@+id/titleTextView"
         app:layout_constraintTop_toTopOf="@+id/bookmarkButton"
         tools:text="@tools:sample/full_names" />
+
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:translationZ="@dimen/elevation_small"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        tools:text="@tools:sample/cities" />
 
 
     <TextView

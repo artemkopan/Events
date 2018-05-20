@@ -47,5 +47,7 @@ dependencies {
 
     implementation deps.glide.runtime
 
+    implementation deps.gms.maps
+
     implementation 'jp.wasabeef:glide-transformations:3.3.0'
 }

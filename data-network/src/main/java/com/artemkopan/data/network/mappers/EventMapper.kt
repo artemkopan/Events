@@ -9,8 +9,10 @@ import com.artemkopan.data.network.response.EventResponse
 import com.artemkopan.data.network.response.LocationResponse
 import com.artemkopan.data.network.response.ProviderResponse
 
+
+//class EventDetailMapper()
+
 class EventMapper(private val providerEntity: ProviderEntity,
-                  private val locationEntity: LocationEntity,
                   private val photos: List<PhotoEntity>) : Mapper<EventEntity, EventResponse>() {
     override fun map(from: EventResponse) = with(from) {
         EventEntity(
@@ -18,10 +20,8 @@ class EventMapper(private val providerEntity: ProviderEntity,
                 address,
                 providerEntity,
                 name,
-                locationEntity,
                 hot,
-                if (photos.isNotEmpty()) photos[0].small ?: "" else "",
-                photos
+                if (photos.isNotEmpty()) photos[0].small ?: "" else ""
         )
     }
 }
@@ -37,3 +37,10 @@ class ProviderMapper : Mapper<ProviderEntity, ProviderResponse>() {
         ProviderEntity(name, id, phone?.normalizedPhoneNumber)
     }
 }
+
+//class ScheduleMapper : Mapper<ScheduleEntity, ScheduleResponse>(){
+//    override fun map(from: ScheduleResponse) = with(from){
+//
+//        ScheduleEntity(timeFrom, timeTo, enabled, )
+//    }
+//}

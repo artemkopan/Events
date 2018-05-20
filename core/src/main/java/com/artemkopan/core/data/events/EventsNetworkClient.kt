@@ -7,4 +7,6 @@ interface EventsNetworkClient {
 
     fun getEvents(page: Int): Single<List<EventEntity>>
 
+    fun getEvent(id: String): Single<EventEntity>
+
 }

@@ -1,8 +1,12 @@
 package com.artemkopan.presentation.ui.events.list
 
 import android.os.Bundle
+import android.support.transition.Slide
+import android.support.transition.TransitionManager
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Gravity
 import android.view.View
+import androidx.navigation.fragment.NavHostFragment
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
@@ -28,14 +32,25 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter.clickEvent = { viewId, pos, item ->
+            val args = Bundle().apply { putString("photo", item.thumbnail) }
+
+            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
+        }
         eventsRecyclerView.adapter = adapter
         eventsRecyclerView.layoutManager = LinearLayoutManager(context)
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel.getEvents()
-                .subscribe(Consumer { adapter.submitList(it) })
+                .subscribe(Consumer {
+                    if (adapter.itemCount == 0) {
+                        TransitionManager.beginDelayedTransition(eventsRecyclerView, Slide(Gravity.BOTTOM))
+                    }
+                    adapter.submitList(it)
+                })
                 .addTo(destroyViewDisposable)
     }
 

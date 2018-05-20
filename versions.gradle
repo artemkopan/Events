@@ -47,7 +47,7 @@ versions.kotlin = "1.2.41"
 versions.paging = "1.0.0"
 versions.work = "1.0.0-alpha01"
 versions.navigation = "1.0.0-alpha01"
-
+versions.gms = "15.0.1"
 def deps = [:]
 
 def support = [:]
@@ -134,6 +134,12 @@ navigation.fragment_ktx = "android.arch.navigation:navigation-fragment-ktx:$vers
 navigation.safe_args_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
 navigation.testing_ktx = "android.arch.navigation:navigation-testing-ktx:$versions.navigation"
 deps.navigation = navigation
+
+
+def gms = [:]
+gms.maps = "com.google.android.gms:play-services-maps:$versions.gms"
+deps.gms = gms
+
 
 deps.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"
 deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"

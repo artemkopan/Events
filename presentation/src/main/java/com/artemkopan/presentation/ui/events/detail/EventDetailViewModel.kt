@@ -5,5 +5,9 @@ import javax.inject.Inject
 
 class EventDetailViewModel @Inject constructor() : BaseViewModel() {
 
+    fun loadEvent(eventId: String) {
+
+    }
+
 
 }

@@ -24,6 +24,10 @@ class EventsNetworkClientMock @Inject constructor(private val app: App,
         return getFileName(page)?.let { parseEvents(it) } ?: Single.just(emptyList())
     }
 
+    override fun getEvent(id: String): Single<EventEntity> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     private fun parseEvents(fileName: String): Single<List<EventEntity>> {
         return Single.fromCallable { readFromFile(fileName) }
                 .map {
@@ -57,7 +61,6 @@ class EventsNetworkClientMock @Inject constructor(private val app: App,
 
             EventMapper(
                     ProviderMapper().map(providerResponse),
-                    LocationMapper().map(locationResponse),
                     photos
             ).map(eventResponse)
         }

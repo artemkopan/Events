@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/fragment_event_detail">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:maxLines="3"
+        tools:text="@tools:sample/lorem/random" />
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/vouchersGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space3x"
+        app:layout_constraintEnd_toEndOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        tools:background="@color/colorGrey"
+        tools:layout_height="30dp">
+
+    </android.support.design.chip.ChipGroup>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/space3x"
+        app:layout_constraintTop_toBottomOf="@id/vouchersGroup" />
+
+    <TextView
+        android:id="@+id/scheduleTextView"
+        style="@style/Event.Detail.Widget.TextItem"
+        android:drawableStart="@drawable/ic_access_time_grey_16dp"
+        android:text="@string/schedule"
+        app:layout_constraintEnd_toEndOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/mapView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/scheduleRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/scheduleTextView"
+        tools:itemCount="1" />
+
+    <android.support.constraint.Group
+        android:id="@+id/scheduleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="scheduleRecyclerView,scheduleTextView" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space3x"
+        android:paddingTop="@dimen/space3x"
+        app:layout_constraintTop_toBottomOf="@id/scheduleRecyclerView"
+        tools:lines="3"
+        tools:text="@tools:sample/lorem/random"
+
+        />
+
+
+</android.support.constraint.ConstraintLayout>

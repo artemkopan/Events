@@ -35,22 +35,30 @@ class EventsAdapter @Inject constructor(val app: App) : BaseAdapter<EventEntity,
                     model = item.thumbnail,
                     transformations = *arrayOf(RoundedCornersTransformation(cornerRadius, 0)))
 
+            previewImageView.transitionName = "preview_${item.id}"
+
             titleTextView.text = item.name
+            addressTextView.text = item.address
+
             providerTextView.text = item.provider?.name
 
             //todo add implementation
-            bookmarkButton.isSelected = true
-            shareButton.isSelected = true
+            bookmarkButton.isSelected = false
+            shareButton.isSelected = false
             reviewsTextView.text = app.applicationContext().string(R.string.reviews, 24)
             ratingBar.rating = 3f
         }
 
         override fun bindClickListener(listener: View.OnClickListener) {
-
+            itemView.setOnClickListener(listener)
+            bookmarkButton.setOnClickListener(listener)
+            shareButton.setOnClickListener(listener)
         }
 
         override fun unbindClickListener() {
-
+            itemView.setOnClickListener(null)
+            bookmarkButton.setOnClickListener(null)
+            shareButton.setOnClickListener(null)
         }
     }
 

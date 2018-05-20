@@ -6,6 +6,7 @@
 
 
     <string name="reviews"><xliff:g example="24" id="reviews_count">%1$d</xliff:g> reviews</string>
+    <string name="schedule">Schedule:</string>
 
 
 </resources>

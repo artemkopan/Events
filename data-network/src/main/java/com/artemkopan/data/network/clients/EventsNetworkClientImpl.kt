@@ -7,6 +7,9 @@ import javax.inject.Inject
 
 class EventsNetworkClientImpl @Inject constructor(private val service: EventsService)
     : EventsNetworkClient {
+    override fun getEvent(id: String): Single<EventEntity> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     override fun getEvents(page: Int): Single<List<EventEntity>> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
