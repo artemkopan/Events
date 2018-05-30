@@ -13,8 +13,6 @@ class EventsActivity : AppCompatActivity(), Injectable {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_events)
-        val classLoader = ClassLoader.getSystemClassLoader()
-        Logger.d("")
     }
 
 //    override fun onCreated(savedInstanceState: Bundle?) {

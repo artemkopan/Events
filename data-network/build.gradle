@@ -30,7 +30,8 @@ dependencies {
     implementation deps.retrofit.adapter
     implementation deps.okhttp_logging_interceptor
 
-    implementation "com.google.firebase:firebase-firestore:17.0.1"
+    implementation "com.google.firebase:firebase-firestore:16.0.0"
+    implementation "com.google.firebase:firebase-core:16.0.0"
 
     debugImplementation deps.stetho.runtime
     debugImplementation deps.stetho.okhttp
@@ -38,3 +39,5 @@ dependencies {
 
     kapt deps.dagger.compiler
 }
+
+apply plugin: 'com.google.gms.google-services'

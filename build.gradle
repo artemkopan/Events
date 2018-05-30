@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0-alpha15'
         classpath deps.kotlin.plugin
+        classpath 'com.google.gms:google-services:3.1.1'
     }
 }
 
@@ -24,4 +25,8 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext{
+    appId = "com.artemkopan.events"
 }

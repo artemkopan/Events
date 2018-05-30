@@ -1,8 +1,7 @@
 package com.artemkopan.data.network.di
 
 import com.artemkopan.core.data.events.EventsNetworkClient
-import com.artemkopan.data.network.clients.EventsNetworkClientImpl
-import com.artemkopan.data.network.clients.EventsNetworkClientMock
+import com.artemkopan.data.network.clients.EventsFirestoreClient
 import com.artemkopan.data.network.clients.EventsService
 import com.artemkopan.di.component.MainToolsProvider
 import com.artemkopan.di.component.NetworkProvider
@@ -16,7 +15,7 @@ import retrofit2.Retrofit
 @Module
 interface ClientsModule {
     @Binds
-    fun bindEventsClient(impl: EventsNetworkClientMock): EventsNetworkClient
+    fun bindEventsClient(impl: EventsFirestoreClient): EventsNetworkClient
 
 }
 

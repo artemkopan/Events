@@ -1,2 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.artemkopan.data"/>
+    package="com.artemkopan.data.repo"/>
