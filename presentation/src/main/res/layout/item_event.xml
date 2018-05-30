@@ -124,7 +124,7 @@
         android:translationZ="@dimen/elevation_small"
         app:layout_constraintBottom_toBottomOf="@id/shareButton"
         app:layout_constraintStart_toStartOf="@+id/titleTextView"
-        app:layout_constraintTop_toTopOf="@+id/ratingTextView"
+        app:layout_constraintTop_toTopOf="@+id/reviewsTextView"
         tools:max="5"
         tools:rating="3" />
 

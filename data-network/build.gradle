@@ -30,6 +30,8 @@ dependencies {
     implementation deps.retrofit.adapter
     implementation deps.okhttp_logging_interceptor
 
+    implementation "com.google.firebase:firebase-firestore:17.0.1"
+
     debugImplementation deps.stetho.runtime
     debugImplementation deps.stetho.okhttp
     releaseImplementation deps.stetho.no_op

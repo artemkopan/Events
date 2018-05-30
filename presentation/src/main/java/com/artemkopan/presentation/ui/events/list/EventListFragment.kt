@@ -39,7 +39,6 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         }
         eventsRecyclerView.adapter = adapter
         eventsRecyclerView.layoutManager = LinearLayoutManager(context)
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
