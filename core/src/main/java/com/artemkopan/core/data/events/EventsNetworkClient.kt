@@ -8,7 +8,7 @@ interface EventsNetworkClient {
 
     fun getCategories(locale: String): Single<List<CategoryEntity>>
 
-    fun getEvents(page: Int): Single<List<EventEntity>>
+    fun getEvents(categoryId: String, page: Int): Single<List<EventEntity>>
 
     fun getEvent(id: String): Single<EventEntity>
 

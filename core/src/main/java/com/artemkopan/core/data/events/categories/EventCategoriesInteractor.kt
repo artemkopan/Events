@@ -1,10 +1,14 @@
 package com.artemkopan.core.data.events.categories
 
 import com.artemkopan.core.entity.CategoryEntity
-import io.reactivex.Single
+import com.artemkopan.core.tools.UiState
+import io.reactivex.Observable
+import io.reactivex.disposables.Disposable
 
-interface EventCategoriesInteractor {
+interface EventCategoriesInteractor : Disposable {
 
-    fun getCategories(): Single<List<CategoryEntity>>
+    fun observer(): Observable<UiState<List<CategoryEntity>>>
+
+    fun loadCategories()
 
 }

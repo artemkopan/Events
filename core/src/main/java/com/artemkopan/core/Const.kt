@@ -11,6 +11,8 @@ object Const {
 
     object Tag {
         const val NETWORK = "NETWORK"
+        const val EVENT_LIST = "EVENT_LIST"
+        const val CATEGORIES_LIST = "CATEGORIES_LIST"
     }
 
     object Url {

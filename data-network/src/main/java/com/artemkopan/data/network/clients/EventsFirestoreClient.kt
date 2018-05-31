@@ -3,6 +3,7 @@ package com.artemkopan.data.network.clients
 import com.artemkopan.core.data.events.EventsNetworkClient
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.entity.EventEntity
+import com.artemkopan.core.tools.Logger
 import com.artemkopan.data.network.fromTask
 import com.google.firebase.firestore.FirebaseFirestore
 import io.reactivex.Flowable
@@ -24,18 +25,24 @@ class EventsFirestoreClient @Inject constructor() : EventsNetworkClient {
     private val storeScheduler: Scheduler
         get() = Schedulers.from(storeExecutor)
 
-    override fun getCategories(locale: String): Single<List<CategoryEntity>> =
-            fromTask(store.collection(PATH_CATEGORIES).get(), storeScheduler)
-                    .flatMapPublisher { Flowable.fromIterable(it) }
-                    .observeOn(Schedulers.io())
-                    .map {
-                        val name = it[locale]
-                                ?: it.data.keys.firstOrNull()?.let { firstKey -> it[firstKey] }
-                        CategoryEntity(it.id, name?.toString() ?: "")
-                    }
-                    .toList()
+    override fun getCategories(locale: String): Single<List<CategoryEntity>> {
+        return fromTask(store.collection(PATH_CATEGORIES).get(), storeScheduler)
+                .flatMapPublisher { Flowable.fromIterable(it) }
+                .observeOn(Schedulers.io())
+                .map {
+                    val name = it[locale]
+                            ?: it.data.keys.firstOrNull()?.let { firstKey -> it[firstKey] }
+                    CategoryEntity(it.id, name?.toString() ?: "")
+                }
+                .toList()
+    }
 
-    override fun getEvents(page: Int): Single<List<EventEntity>> {
+
+    override fun getEvents(categoryId: String, page: Int): Single<List<EventEntity>> {
+        fromTask(store.collection(PATH_EVENTS).get(), storeScheduler)
+                .subscribe { t1, t2 ->
+                    Logger.d("")
+                }
         return Single.never()
     }
 

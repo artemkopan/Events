@@ -45,19 +45,19 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.getCategories()
-                .subscribe(BiConsumer { t1, t2 ->
-                    Logger.d("test")
-                })
-
-        viewModel.getEvents()
-                .subscribe(Consumer {
-                    if (adapter.itemCount == 0) {
-                        TransitionManager.beginDelayedTransition(eventsRecyclerView, Slide(Gravity.BOTTOM))
-                    }
-                    adapter.submitList(it)
-                })
-                .addTo(destroyViewDisposable)
+//        viewModel.getCategories()
+//                .subscribe(BiConsumer { t1, t2 ->
+//                    Logger.d("test")
+//                })
+//
+//        viewModel.getEvents()
+//                .subscribe(Consumer {
+//                    if (adapter.itemCount == 0) {
+//                        TransitionManager.beginDelayedTransition(eventsRecyclerView, Slide(Gravity.BOTTOM))
+//                    }
+//                    adapter.submitList(it)
+//                })
+//                .addTo(destroyViewDisposable)
     }
 
 }
