@@ -1,20 +1,16 @@
 package com.artemkopan.presentation.ui.events.list
 
 import android.os.Bundle
-import android.support.transition.Slide
-import android.support.transition.TransitionManager
 import android.support.v7.widget.LinearLayoutManager
-import android.view.Gravity
 import android.view.View
+import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
-import com.artemkopan.core.tools.Logger
+import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
 import com.artemkopan.presentation.base.Injectable
 import com.artemkopan.presentation.ui.events.EventsComponent
-import io.reactivex.functions.BiConsumer
-import io.reactivex.functions.Consumer
 import io.reactivex.rxkotlin.addTo
 import kotlinx.android.synthetic.main.fragment_event_list.*
 import javax.inject.Inject
@@ -45,19 +41,45 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        viewModel.getCategories()
-//                .subscribe(BiConsumer { t1, t2 ->
-//                    Logger.d("test")
-//                })
-//
-//        viewModel.getEvents()
-//                .subscribe(Consumer {
-//                    if (adapter.itemCount == 0) {
-//                        TransitionManager.beginDelayedTransition(eventsRecyclerView, Slide(Gravity.BOTTOM))
-//                    }
-//                    adapter.submitList(it)
-//                })
-//                .addTo(destroyViewDisposable)
+        subscribeCategories()
+    }
+
+
+    private fun subscribeCategories() {
+        viewModel.observeCategories()
+                .subscribe({
+                    when {
+                        it.isLoading -> {
+                        }
+                        it.isError -> {
+                            Toast.makeText(context, it.throwable?.message ?: "", Toast.LENGTH_LONG)
+                                    .show()
+                        }
+                        it.isSuccess -> {
+                            //todo submit into adapter
+                            it.data?.let { subscribeEvents(it) }
+                        }
+                    }
+                })
+                .addTo(destroyViewDisposable)
+    }
+
+    private fun subscribeEvents(categories: List<CategoryEntity>) {
+        categories.forEach { (id) ->
+            viewModel.observeEvents(id)
+                    .subscribe {
+                        when {
+                            it.isLoading -> {
+                            }
+                            it.isError -> {
+                            }
+                            it.isSuccess -> {
+                                adapter.submitList(it.data)
+                            }
+                        }
+                    }
+                    .addTo(destroyViewDisposable)
+        }
     }
 
 }

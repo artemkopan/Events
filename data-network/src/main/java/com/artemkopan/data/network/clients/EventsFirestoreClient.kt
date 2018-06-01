@@ -3,7 +3,6 @@ package com.artemkopan.data.network.clients
 import com.artemkopan.core.data.events.EventsNetworkClient
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.entity.EventEntity
-import com.artemkopan.core.tools.Logger
 import com.artemkopan.data.network.fromTask
 import com.google.firebase.firestore.FirebaseFirestore
 import io.reactivex.Flowable
@@ -38,12 +37,22 @@ class EventsFirestoreClient @Inject constructor() : EventsNetworkClient {
     }
 
 
-    override fun getEvents(categoryId: String, page: Int): Single<List<EventEntity>> {
-        fromTask(store.collection(PATH_EVENTS).get(), storeScheduler)
-                .subscribe { t1, t2 ->
-                    Logger.d("")
+    override fun getEvents(categoryId: String, page: Int, limit: Int): Single<List<EventEntity>> {
+        return fromTask(store.collection(PATH_EVENTS).limit(limit.toLong()).get(), storeScheduler)
+                .map {
+                    val events = arrayListOf<EventEntity>()
+                    it.documents.forEach { doc ->
+                        events.add(EventEntity(
+                                doc["id"] as Long,
+                                doc["address"] as String,
+                                null,
+                                doc["name"] as String,
+                                doc["hot"] as Boolean,
+                                null
+                        ))
+                    }
+                    return@map events
                 }
-        return Single.never()
     }
 
     override fun getEvent(id: String): Single<EventEntity> {

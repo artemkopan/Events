@@ -16,7 +16,7 @@ class EventMapper(private val providerEntity: ProviderEntity,
                   private val photos: List<PhotoEntity>) : Mapper<EventEntity, EventResponse>() {
     override fun map(from: EventResponse) = with(from) {
         EventEntity(
-                id,
+                id?.toLong(),
                 address,
                 providerEntity,
                 name,

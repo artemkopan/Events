@@ -13,15 +13,21 @@ class EventListViewModel @Inject constructor(private val eventListInteractor: Ev
     init {
         clearDisposable.addAll(eventListInteractor, eventCategoriesInteractor)
         eventCategoriesInteractor.loadCategories()
-
-        eventListInteractor.setCategoryId("10")
-        eventListInteractor.loadEvents()
+        eventCategoriesInteractor.observer()
+                .subscribe {
+                    it.data?.forEach { (id) ->
+                        eventListInteractor.setCategoryId(id)
+                        eventListInteractor.loadEvents(id)
+                    }
+                }
     }
 
+    fun observeCategories() = eventCategoriesInteractor
+            .observer()
+            .observeOn(AndroidSchedulers.mainThread())!!
 
-    fun observeCategories() = eventCategoriesInteractor.observer().observeOn(AndroidSchedulers.mainThread())
-
-    fun observeEvents(){}
-
+    fun observeEvents(categoryId: String) = eventListInteractor
+            .observer(categoryId)
+            .observeOn(AndroidSchedulers.mainThread())!!
 
 }

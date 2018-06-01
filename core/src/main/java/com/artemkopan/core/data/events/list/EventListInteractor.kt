@@ -9,8 +9,8 @@ interface EventListInteractor : Disposable {
 
     fun setCategoryId(categoryId: String)
 
-    fun loadEvents()
+    fun loadEvents(categoryId: String)
 
-    fun observer(): Observable<UiState<List<EventEntity>>>
+    fun observer(categoryId: String): Observable<UiState<List<EventEntity>>>
 
 }
