@@ -49,7 +49,7 @@ class EventsFirestoreClient @Inject constructor() : EventsNetworkClient {
                     it.documents.forEach { doc ->
                         val category = doc["category"] as DocumentReference
                         val location = doc["location"] as GeoPoint
-                        val thumbnail = (doc["photos"] as List<Map<String, Any>>)[0]["small"] as String?
+                        val thumbnail = (doc["photos"] as List<Map<String, Any>>)[0]["original"] as String?
                         val provider = (doc["provider"] as Map<String, Any>)["name"] as String?
 
                         events.add(EventEntity(
