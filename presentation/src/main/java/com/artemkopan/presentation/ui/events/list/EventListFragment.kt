@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
@@ -18,7 +17,7 @@ import javax.inject.Inject
 class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     @Inject
-    lateinit var adapter: EventsAdapter
+    lateinit var adapter: EventsGroupAdapter
 
     override fun inject(appProvider: ApplicationProvider) {
         EventsComponent.Initializer.init(appProvider).inject(this)
@@ -31,12 +30,11 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter.clickEvent = { viewId, pos, item ->
-            val args = Bundle().apply { putString("photo", item.thumbnail) }
-
-            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
+            //            val args = Bundle().apply { putString("photo", item.thumbnail) }
+//            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
         }
-        eventsRecyclerView.adapter = adapter
-        eventsRecyclerView.layoutManager = LinearLayoutManager(context)
+        eventsGroupRecyclerView.adapter = adapter
+        eventsGroupRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -56,8 +54,10 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
                                     .show()
                         }
                         it.isSuccess -> {
-                            //todo submit into adapter
-                            it.data?.let { subscribeEvents(it) }
+                            it.data?.let {
+                                adapter.submitList(it)
+                                subscribeEvents(it)
+                            }
                         }
                     }
                 })
@@ -74,7 +74,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
                             it.isError -> {
                             }
                             it.isSuccess -> {
-                                adapter.submitList(it.data)
+                                adapter.submitEvents(id, it.data!!)
                             }
                         }
                     }

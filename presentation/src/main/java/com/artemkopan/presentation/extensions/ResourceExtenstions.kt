@@ -15,6 +15,7 @@ infix fun Context.stringArray(@ArrayRes stringRes: Int): Array<out String> = res
 infix fun Context.drawable(@DrawableRes drawableRes: Int) = ContextCompat.getDrawable(this, drawableRes)!!
 
 infix fun Resources.dimen(@DimenRes dimenRes: Int) = this.getDimensionPixelSize(dimenRes)
+infix fun Resources.integer(@IntegerRes integerRes: Int) = this.getInteger(integerRes)
 infix fun Resources.string(@StringRes stringRes: Int) = this.getString(stringRes)!!
 
 infix fun Fragment.color(@ColorRes colorRes: Int) = ContextCompat.getColor(this.context!!, colorRes)

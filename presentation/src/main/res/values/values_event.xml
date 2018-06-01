@@ -2,8 +2,7 @@
 <resources>
 
 
-    <dimen name="event_item_space">@dimen/space2x</dimen>
-
+    <dimen name="event_item_space">@dimen/space3x</dimen>
 
     <style name="Event" />
 
