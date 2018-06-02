@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:paddingTop="@dimen/event_item_space"
-    android:paddingStart="@dimen/event_item_space"
-    android:layout_height="wrap_content">
+    android:layout_width="@dimen/event_item_width"
+    android:layout_height="@dimen/event_item_height"
+    android:layout_marginBottom="@dimen/event_item_space"
+    android:layout_marginStart="@dimen/event_item_space"
+    android:layout_marginTop="@dimen/event_item_space"
+    app:cardCornerRadius="@dimen/corner_radius_small">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/previewImageView"
         android:layout_width="0dp"
-        android:layout_height="140dp"
+        android:layout_height="0dp"
         android:background="@drawable/bg_grey_corner"
-        android:elevation="@dimen/elevation_small"
-        android:translationZ="1dp"
-        app:layout_constraintDimensionRatio="w,1:1.2"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:scaleType="centerCrop"
         tools:src="@tools:sample/avatars" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/providerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space1x"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/event_item_provider_text_size"
+        app:layout_constraintEnd_toEndOf="@id/previewImageView"
+        app:layout_constraintStart_toStartOf="@id/previewImageView"
+        app:layout_constraintTop_toBottomOf="@id/previewImageView"
+        tools:text="Ibiza beach club\n22222" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/titleTextView"
@@ -26,13 +42,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space1x"
         android:ellipsize="end"
-        android:maxLines="2"
+        android:maxLines="3"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textSize="14sp"
-        android:translationZ="@dimen/elevation_small"
+        android:textSize="@dimen/event_item_title_text_size"
         app:layout_constraintEnd_toEndOf="@id/previewImageView"
         app:layout_constraintStart_toStartOf="@id/previewImageView"
-        app:layout_constraintTop_toBottomOf="@id/previewImageView"
+        app:layout_constraintTop_toBottomOf="@id/providerTextView"
         tools:text="@tools:sample/lorem/random" />
 
 </android.support.constraint.ConstraintLayout>
+

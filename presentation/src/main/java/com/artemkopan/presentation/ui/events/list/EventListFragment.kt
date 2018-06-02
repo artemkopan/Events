@@ -2,9 +2,17 @@ package com.artemkopan.presentation.ui.events.list
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.transition.Fade
+import android.transition.Slide
+import android.transition.TransitionManager
+import android.transition.TransitionSet
+import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
+import com.artemkopan.core.tools.DataState
+import com.artemkopan.core.tools.ErrorState
+import com.artemkopan.core.tools.LoadingState
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
@@ -45,41 +53,62 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     private fun subscribeCategories() {
         viewModel.observeCategories()
-                .subscribe({
-                    when {
-                        it.isLoading -> {
-                        }
-                        it.isError -> {
-                            Toast.makeText(context, it.throwable?.message ?: "", Toast.LENGTH_LONG)
-                                    .show()
-                        }
-                        it.isSuccess -> {
-                            it.data?.let {
-                                adapter.submitList(it)
-                                subscribeEvents(it)
-                            }
+            .subscribe {
+                when (it) {
+                    is LoadingState -> {
+
+                    }
+                    is ErrorState -> {
+                        shoeError(it)
+                    }
+                    is DataState -> {
+                        it.data.let {
+                            animateGroupRecycler()
+                            adapter.submitList(it)
+                            subscribeEvents(it)
                         }
                     }
-                })
-                .addTo(destroyViewDisposable)
+                }
+            }
+            .addTo(destroyViewDisposable)
     }
+
 
     private fun subscribeEvents(categories: List<CategoryEntity>) {
         categories.forEach { (id) ->
             viewModel.observeEvents(id)
-                    .subscribe {
-                        when {
-                            it.isLoading -> {
-                            }
-                            it.isError -> {
-                            }
-                            it.isSuccess -> {
-                                adapter.submitEvents(id, it.data!!)
-                            }
+                .subscribe {
+                    when (it) {
+                        is LoadingState -> {
+                            adapter.showEventsLoading(id, it.isLoading)
+                        }
+                        is ErrorState -> {
+                            shoeError(it)
+                        }
+                        is DataState -> {
+                            eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data) }
                         }
                     }
-                    .addTo(destroyViewDisposable)
+                }
+                .addTo(destroyViewDisposable)
         }
     }
 
+    private fun shoeError(it: ErrorState<*>) {
+        Toast.makeText(context, it.throwable.message ?: "", Toast.LENGTH_LONG)
+            .show()
+    }
+
+
+    private fun animateGroupRecycler() {
+        if (adapter.getListSize() == 0) {
+            TransitionManager.beginDelayedTransition(
+                eventsGroupRecyclerView,
+                TransitionSet().apply {
+                    addTransition(Fade().setDuration(100))
+                    addTransition(Slide(Gravity.BOTTOM).setDuration(200))
+                }
+            )
+        }
+    }
 }

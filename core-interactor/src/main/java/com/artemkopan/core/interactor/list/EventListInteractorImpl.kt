@@ -15,26 +15,22 @@ import io.reactivex.subjects.Subject
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 
-class EventListInteractorImpl @Inject constructor(private val eventsNetworkClient: EventsNetworkClient)
-    : EventListInteractor {
+class EventListInteractorImpl @Inject constructor(private val eventsNetworkClient: EventsNetworkClient) : EventListInteractor {
 
     companion object {
         private const val LIMIT = 10
+        private const val START_PAGE = 1
     }
 
-    private val categoriesData: MutableMap<String, UiStateSubject<List<EventEntity>>> = ConcurrentHashMap()
-
-    override fun setCategoryId(categoryId: String) {
-        if (!categoriesData.containsKey(categoryId)) {
-            categoriesData[categoryId] = EventsStateSubject(categoryId)
-        }
-    }
+    private val categoriesData: MutableMap<String, UiStateSubject<Int, List<EventEntity>>> = ConcurrentHashMap()
 
     override fun loadEvents(categoryId: String) {
-        categoriesData[categoryId]!!.loadData()
+        initDataSubject(categoryId)
+        categoriesData[categoryId]!!.loadData(START_PAGE)
     }
 
     override fun observer(categoryId: String): Observable<UiState<List<EventEntity>>> {
+        initDataSubject(categoryId)
         return categoriesData[categoryId]!!.observer()
     }
 
@@ -44,17 +40,24 @@ class EventListInteractorImpl @Inject constructor(private val eventsNetworkClien
 
     override fun isDisposed(): Boolean = false
 
-    private inner class EventsStateSubject(private val categoryId: String)
-        : UiStateSubject<List<EventEntity>>() {
+    private fun initDataSubject(categoryId: String) {
+        if (!categoriesData.containsKey(categoryId)) {
+            categoriesData[categoryId] = EventsStateSubject(categoryId)
+        }
+    }
 
-        override fun createData(subject: Subject<UiState<List<EventEntity>>>): Disposable {
-            return eventsNetworkClient.getEvents(categoryId, 1, LIMIT)
-                    .subscribeOn(Schedulers.io())
-                    .doOnError {
-                        Logger.e(Const.Tag.EVENT_LIST, "Error load movie list: category " +
-                                "$categoryId, page $'page", it)
-                    }
-                    .subscribe(subject)
+    private inner class EventsStateSubject(private val categoryId: String) : UiStateSubject<Int, List<EventEntity>>() {
+
+        override fun createData(subject: Subject<UiState<List<EventEntity>>>, payload: Int?): Disposable {
+            return eventsNetworkClient.getEvents(categoryId, payload!!, LIMIT)
+                .subscribeOn(Schedulers.io())
+                .doOnError {
+                    Logger.e(
+                        Const.Tag.EVENT_LIST, "Error load movie list: category " +
+                                "$categoryId, page $'page", it
+                    )
+                }
+                .subscribe(subject)
         }
     }
 

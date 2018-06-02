@@ -50,7 +50,7 @@ class AppInjector(private val application: EventsApp) {
         if (activity is Injectable) {
             activity.inject(application.applicationProvider)
         } else {
-            Logger.i("Your activity doesn't injectable %s.\n" +
+            Logger.i("Your activity doesn't injectable $activity.\n" +
                     "Implement Injectable interface if you want injectable activity ")
         }
         if (activity is FragmentActivity) {
@@ -65,7 +65,7 @@ class AppInjector(private val application: EventsApp) {
                 if (f is Injectable) {
                     f.inject(application.applicationProvider)
                 } else {
-                    Logger.i("Your fragment doesn't injectable %s.\n" +
+                    Logger.i("Your fragment doesn't injectable $f.\n" +
                             "Implement Injectable interface if you want injectable activity ")
                 }
             }

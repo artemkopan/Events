@@ -3,15 +3,22 @@
 
 
     <dimen name="event_item_space">@dimen/space3x</dimen>
+    <dimen name="event_item_height">176dp</dimen>
+    <dimen name="event_item_height_with_space">200dp</dimen> // event_item_height + (event_item_space * 2)
+    <dimen name="event_item_width">100dp</dimen>
+
+    <dimen name="event_item_provider_text_size">8sp</dimen>
+    <dimen name="event_item_title_text_size">10sp</dimen>
 
     <style name="Event" />
 
     <style name="Event.List" />
+
     <style name="Event.Detail" />
 
     <style name="Event.List.Widget" />
-    <style name="Event.Detail.Widget" />
 
+    <style name="Event.Detail.Widget" />
 
     <style name="Event.List.Widget.Button">
         <item name="android:layout_width">20dp</item>
@@ -26,7 +33,6 @@
     </style>
 
 
-
     <style name="Event.Detail.Widget.TextItem">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -37,7 +43,6 @@
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
         <item name="android:textColor">@color/colorGrey</item>
     </style>
-
 
 
 </resources>

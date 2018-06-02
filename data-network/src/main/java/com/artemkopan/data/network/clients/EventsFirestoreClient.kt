@@ -3,6 +3,7 @@ package com.artemkopan.data.network.clients
 import com.artemkopan.core.data.events.EventsNetworkClient
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.entity.EventEntity
+import com.artemkopan.core.entity.ProviderEntity
 import com.artemkopan.data.network.fromTask
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -48,14 +49,16 @@ class EventsFirestoreClient @Inject constructor() : EventsNetworkClient {
                     val events = arrayListOf<EventEntity>()
                     it.documents.forEach { doc ->
                         val category = doc["category"] as DocumentReference
-                        val location = doc["location"] as GeoPoint
-                        val thumbnail = (doc["photos"] as List<Map<String, Any>>)[0]["original"] as String?
+                        val location = doc["location"] as GeoPoint?
+                        val thumbnail = with((doc["photos"] as List<Map<String, Any>>)){
+                            if(isNotEmpty()) this[0]["original"] as String? else ""
+                        }
                         val provider = (doc["provider"] as Map<String, Any>)["name"] as String?
 
                         events.add(EventEntity(
                                 doc["id"] as Long,
                                 doc["address"] as String,
-                                null,
+                                ProviderEntity(name = provider),
                                 doc["name"] as String,
                                 doc["hot"] as Boolean,
                                 thumbnail

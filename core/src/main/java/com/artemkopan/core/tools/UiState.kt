@@ -1,29 +1,26 @@
 package com.artemkopan.core.tools
 
-class UiState<T> {
+import io.reactivex.Single
+import io.reactivex.disposables.Disposable
+import io.reactivex.subjects.Subject
 
-    val isLoading: Boolean
-    val isSuccess: Boolean get() = data != null
-    val isError: Boolean get() = throwable != null
+@kotlin.Suppress("unused")
+sealed class UiState<T>
 
-    var data: T? = null
-        private set
+data class LoadingState<T>(val isLoading: Boolean) : UiState<T>()
+data class ErrorState<T>(val throwable: Throwable) : UiState<T>()
+data class DataState<T>(val data: T) : UiState<T>()
 
-    var throwable: Throwable? = null
-        private set
 
-    constructor(isLoading: Boolean) {
-        this.isLoading = isLoading
-    }
-
-    constructor(data: T?) : this(data, null)
-
-    constructor(throwable: Throwable?) : this(null, throwable)
-
-    constructor(data: T?, throwable: Throwable?) {
-        this.isLoading = false
-        this.data = data
-        this.throwable = throwable
-    }
-
+fun <T> Single<T>.subscribe(subject: Subject<UiState<T>>): Disposable {
+    return this
+        .doOnSubscribe { subject.onNext(LoadingState(true)) }
+        .subscribe({
+                       subject.onNext(LoadingState(false))
+                       subject.onNext(DataState(it))
+                   },
+                   {
+                       subject.onNext(LoadingState(false))
+                       subject.onNext(ErrorState(it))
+                   })
 }
