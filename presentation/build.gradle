@@ -41,6 +41,8 @@ dependencies {
     implementation deps.navigation.runtime
     implementation deps.navigation.fragment
 
+    implementation deps.paging
+
     implementation deps.constraint_layout
 
     implementation deps.lifecycle.extensions

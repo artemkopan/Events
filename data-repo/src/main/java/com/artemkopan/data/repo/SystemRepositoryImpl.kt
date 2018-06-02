@@ -3,10 +3,18 @@ package com.artemkopan.data.repo
 import android.os.Build
 import com.artemkopan.core.data.SystemRepository
 import com.artemkopan.di.App
+import java.util.*
 import javax.inject.Inject
 
 
 class SystemRepositoryImpl @Inject constructor(private val app: App) : SystemRepository {
+
+    private val utc by lazy { TimeZone.getTimeZone("UTC") }
+
+    override fun getCurrentTime(): Long = System.currentTimeMillis()
+
+    override fun getCurrentTimeUTC(): Long = Calendar.getInstance(utc).timeInMillis
+
     override fun getCurrentLocal(): String? {
         @Suppress("DEPRECATION")
         return (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

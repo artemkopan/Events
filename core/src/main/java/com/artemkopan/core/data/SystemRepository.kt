@@ -7,4 +7,8 @@ interface SystemRepository {
      */
     fun getCurrentLocal(): String?
 
+
+    fun getCurrentTime() : Long
+
+    fun getCurrentTimeUTC() : Long
 }
