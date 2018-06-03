@@ -23,12 +23,12 @@ class EventListInteractorImpl @Inject constructor(private val eventsNetworkClien
     private val categoriesData: MutableMap<String, UiStateSubject<Any, PagedList<EventEntity>>> = ConcurrentHashMap()
 
     override fun loadEvents(categoryId: String, lastItem: EventEntity?) {
-        initDataSubject(categoryId)
+        initDataSubjectIfNeed(categoryId)
         categoriesData[categoryId]!!.loadData()
     }
 
     override fun observer(categoryId: String): Observable<UiState<PagedList<EventEntity>>> {
-        initDataSubject(categoryId)
+        initDataSubjectIfNeed(categoryId)
         return categoriesData[categoryId]!!.observer()
     }
 
@@ -36,7 +36,7 @@ class EventListInteractorImpl @Inject constructor(private val eventsNetworkClien
 
     override fun isDisposed(): Boolean = false
 
-    private fun initDataSubject(categoryId: String) {
+    private fun initDataSubjectIfNeed(categoryId: String) {
         if (!categoriesData.containsKey(categoryId)) {
             categoriesData[categoryId] = EventsStateSubject(categoryId)
         }

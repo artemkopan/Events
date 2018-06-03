@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import com.artemkopan.core.entity.EventEntity
 import com.artemkopan.di.App
 import com.artemkopan.presentation.R
-import com.artemkopan.presentation.base.recycler.BaseHolder
-import com.artemkopan.presentation.base.recycler.BasePagedAdapter
-import com.artemkopan.presentation.base.recycler.SimpleHolder
+import com.artemkopan.presentation.base.recycler.holders.BaseHolder
+import com.artemkopan.presentation.base.recycler.adapters.BasePagedAdapter
+import com.artemkopan.presentation.base.recycler.holders.SimpleHolder
 import com.artemkopan.presentation.extensions.dimen
 import com.artemkopan.presentation.extensions.inflateView
 import com.artemkopan.presentation.misc.loadImage

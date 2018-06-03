@@ -12,8 +12,8 @@ import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.entity.EventEntity
 import com.artemkopan.di.App
 import com.artemkopan.presentation.R
-import com.artemkopan.presentation.base.recycler.BaseAdapter
-import com.artemkopan.presentation.base.recycler.BaseHolder
+import com.artemkopan.presentation.base.recycler.adapters.BaseDataAdapter
+import com.artemkopan.presentation.base.recycler.holders.BaseHolder
 import com.artemkopan.presentation.extensions.dimen
 import com.artemkopan.presentation.extensions.inflateView
 import com.artemkopan.presentation.ui.events.list.EventsGroupAdapter.EventsGroupHolder
@@ -24,27 +24,27 @@ import javax.inject.Provider
 
 class EventsGroupAdapter @Inject constructor(private val app: App,
                                              private val eventsAdapterProvider: Provider<EventsAdapter>)
-    : BaseAdapter<CategoryEntity, EventsGroupHolder>(DIFF_CALLBACK) {
+    : BaseDataAdapter<CategoryEntity, EventsGroupHolder>(DIFF_CALLBACK) {
 
     private val viewPool = RecyclerView.RecycledViewPool()
     private val eventsData = ArrayMap<String, EventsAdapter>()
     private val space by lazy { app.resources().dimen(R.dimen.event_item_space) }
 
     fun submitEvents(categoryId: String, data: PagedList<EventEntity>) {
-        checkEventsMap(categoryId)
+        initEventsAdapterIfNeed(categoryId)
         eventsData[categoryId]!!.submitList(data)
     }
 
-    fun showEventsLoading(categoryId: String, isLoading: Boolean){
-        checkEventsMap(categoryId)
-        eventsData[categoryId]!!.showFooter = isLoading
+    fun showEventsLoading(categoryId: String, isLoading: Boolean) {
+        initEventsAdapterIfNeed(categoryId)
+        eventsData[categoryId]!!.showFooter(isLoading)
     }
 
     override fun onCreateItemViewHolder(parent: ViewGroup, viewType: Int): EventsGroupHolder {
         return EventsGroupHolder(parent.inflateView(R.layout.item_event_group))
     }
 
-    private fun checkEventsMap(key: String) {
+    private fun initEventsAdapterIfNeed(key: String) {
         if (!eventsData.containsKey(key)) {
             eventsData[key] = eventsAdapterProvider.get()
         }
@@ -63,7 +63,7 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
         override fun bind(item: CategoryEntity) {
             categoryTextView.text = item.name
             item.id.let { categoryId ->
-                checkEventsMap(categoryId)
+                initEventsAdapterIfNeed(categoryId)
                 eventsRecyclerView.adapter = eventsData[categoryId]
             }
         }

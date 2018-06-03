@@ -37,7 +37,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter.clickEvent = { viewId, pos, item ->
+        adapter.setClickEvent { viewId, pos, item ->
             //            val args = Bundle().apply { putString("photo", item.thumbnail) }
 //            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
         }

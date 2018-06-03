@@ -1,4 +1,4 @@
-package com.artemkopan.presentation.base.recycler
+package com.artemkopan.presentation.base.recycler.holders
 
 import android.view.View
 

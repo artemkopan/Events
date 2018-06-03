@@ -1,4 +1,4 @@
-package com.artemkopan.presentation.base.recycler
+package com.artemkopan.presentation.base.recycler.holders
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
