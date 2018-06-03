@@ -1,12 +1,32 @@
 package com.artemkopan.core.tools
 
-import io.reactivex.Single
-import io.reactivex.disposables.Disposable
-import io.reactivex.subjects.Subject
+class UiState<T> {
 
-@kotlin.Suppress("unused")
-sealed class UiState<T>
+    val isLoading: Boolean
+    val isSuccess: Boolean get() = data != null
+    val isError: Boolean get() = throwable != null
 
-data class LoadingUiState<T>(val isLoading: Boolean) : UiState<T>()
-data class ErrorUiState<T>(val throwable: Throwable) : UiState<T>()
-data class DataUiState<T>(val data: T) : UiState<T>()
+    var data: T? = null
+        private set
+
+    var throwable: Throwable? = null
+        private set
+
+    constructor(isLoading: Boolean) {
+        this.isLoading = isLoading
+    }
+
+    constructor(data: T?) : this(data, null)
+
+    constructor(throwable: Throwable?) : this(null, throwable)
+
+    constructor(data: T?, throwable: Throwable?) {
+        this.isLoading = false
+        this.data = data
+        this.throwable = throwable
+    }
+
+    override fun toString(): String {
+        return "UiState(isLoading=$isLoading, data=$data, throwable=$throwable)"
+    }
+}

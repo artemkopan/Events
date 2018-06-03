@@ -10,13 +10,12 @@ import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
-import com.artemkopan.core.tools.DataUiState
-import com.artemkopan.core.tools.ErrorUiState
-import com.artemkopan.core.tools.LoadingUiState
+import com.artemkopan.core.tools.UiState
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
 import com.artemkopan.presentation.base.Injectable
+import com.artemkopan.presentation.base.recycler.RecyclerStateManager
 import com.artemkopan.presentation.ui.events.EventsComponent
 import io.reactivex.rxkotlin.addTo
 import kotlinx.android.synthetic.main.fragment_event_list.*
@@ -27,6 +26,8 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     @Inject
     lateinit var adapter: EventsGroupAdapter
 
+    private val recyclerState by lazy(LazyThreadSafetyMode.NONE) { RecyclerStateManager() }
+
     override fun inject(appProvider: ApplicationProvider) {
         EventsComponent.Initializer.init(appProvider).inject(this)
     }
@@ -35,14 +36,23 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun getViewModelClass(): Class<EventListViewModel> = EventListViewModel::class.java
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        savedInstanceState?.let {
+            recyclerState.restoreState(it)
+            adapter.eventsBundle.putAll(it)
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        eventsGroupRecyclerView.adapter = adapter
+        eventsGroupRecyclerView.layoutManager = LinearLayoutManager(context)
+
         adapter.setClickEvent { viewId, pos, item ->
             //            val args = Bundle().apply { putString("photo", item.thumbnail) }
 //            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
         }
-        eventsGroupRecyclerView.adapter = adapter
-        eventsGroupRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -50,20 +60,29 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         subscribeCategories()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putAll(adapter.eventsBundle)
+        adapter.eventsBundle.clear()
+        recyclerState.saveState(eventsGroupRecyclerView, outState)
+    }
+
+    override fun onDestroyView() {
+        eventsGroupRecyclerView.adapter = null
+        super.onDestroyView()
+    }
 
     private fun subscribeCategories() {
         viewModel.observeCategories()
             .subscribe {
-                when (it) {
-                    is LoadingUiState -> {
-
-                    }
-                    is ErrorUiState -> {
+                //todo implement categories loading
+                when {
+                    it.isError -> {
                         shoeError(it)
                     }
-                    is DataUiState -> {
-                        it.data.let {
-                            animateGroupRecycler()
+                    it.isSuccess -> {
+                        it.data!!.let {
+                            restoreRecyclerStateAndAnimate()
                             adapter.submitList(it)
                             subscribeEvents(it)
                         }
@@ -78,15 +97,13 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         categories.forEach { (id) ->
             viewModel.observeEvents(id)
                 .subscribe {
-                    when (it) {
-                        is LoadingUiState -> {
-                            adapter.showEventsLoading(id, it.isLoading)
-                        }
-                        is ErrorUiState -> {
+                    adapter.showEventsLoading(id, it.isLoading)
+                    when {
+                        it.isError -> {
                             shoeError(it)
                         }
-                        is DataUiState -> {
-                            eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data) }
+                        it.isSuccess -> {
+                            eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data!!) }
                         }
                     }
                 }
@@ -94,13 +111,12 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         }
     }
 
-    private fun shoeError(it: ErrorUiState<*>) {
-        Toast.makeText(context, it.throwable.message ?: "", Toast.LENGTH_LONG)
+    private fun shoeError(it: UiState<*>) {
+        Toast.makeText(context, it.throwable?.message ?: "", Toast.LENGTH_LONG)
             .show()
     }
 
-
-    private fun animateGroupRecycler() {
+    private fun restoreRecyclerStateAndAnimate() {
         if (adapter.getListSize() == 0) {
             TransitionManager.beginDelayedTransition(
                 eventsGroupRecyclerView,
@@ -109,6 +125,8 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
                     addTransition(Slide(Gravity.BOTTOM).setDuration(200))
                 }
             )
+        } else if (recyclerState.hasState()) {
+            recyclerState.applyState(eventsGroupRecyclerView)
         }
     }
 }

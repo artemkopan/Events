@@ -9,6 +9,7 @@ import android.view.View
 import com.artemkopan.core.tools.Logger
 import dagger.Lazy
 import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.*
 import javax.inject.Inject
 
 @Suppress("MemberVisibilityCanBePrivate")
@@ -33,6 +34,7 @@ abstract class BaseActivity<ViewModel : BaseViewModel> : AppCompatActivity() {
     override fun onDestroy() {
         destroyDisposable.clear()
         unregisterViewModelLifecycle()
+        clearFindViewByIdCache()
         super.onDestroy()
     }
 

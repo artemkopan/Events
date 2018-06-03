@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.artemkopan.core.tools.Logger
 import dagger.Lazy
 import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.*
 import javax.inject.Inject
 
 abstract class BaseFragment<ViewModel : BaseViewModel> : Fragment() {
@@ -45,6 +46,7 @@ abstract class BaseFragment<ViewModel : BaseViewModel> : Fragment() {
 
     override fun onDestroyView() {
         destroyViewDisposable.clear()
+        clearFindViewByIdCache()
         super.onDestroyView()
     }
 
