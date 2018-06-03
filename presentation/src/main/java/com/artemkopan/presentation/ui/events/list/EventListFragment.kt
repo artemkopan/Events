@@ -10,9 +10,9 @@ import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
-import com.artemkopan.core.tools.DataState
-import com.artemkopan.core.tools.ErrorState
-import com.artemkopan.core.tools.LoadingState
+import com.artemkopan.core.tools.DataUiState
+import com.artemkopan.core.tools.ErrorUiState
+import com.artemkopan.core.tools.LoadingUiState
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
@@ -55,13 +55,13 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         viewModel.observeCategories()
             .subscribe {
                 when (it) {
-                    is LoadingState -> {
+                    is LoadingUiState -> {
 
                     }
-                    is ErrorState -> {
+                    is ErrorUiState -> {
                         shoeError(it)
                     }
-                    is DataState -> {
+                    is DataUiState -> {
                         it.data.let {
                             animateGroupRecycler()
                             adapter.submitList(it)
@@ -79,13 +79,13 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
             viewModel.observeEvents(id)
                 .subscribe {
                     when (it) {
-                        is LoadingState -> {
+                        is LoadingUiState -> {
                             adapter.showEventsLoading(id, it.isLoading)
                         }
-                        is ErrorState -> {
+                        is ErrorUiState -> {
                             shoeError(it)
                         }
-                        is DataState -> {
+                        is DataUiState -> {
                             eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data) }
                         }
                     }
@@ -94,7 +94,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         }
     }
 
-    private fun shoeError(it: ErrorState<*>) {
+    private fun shoeError(it: ErrorUiState<*>) {
         Toast.makeText(context, it.throwable.message ?: "", Toast.LENGTH_LONG)
             .show()
     }

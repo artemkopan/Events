@@ -1,5 +1,7 @@
 package com.artemkopan.core.data
 
+import java.util.concurrent.Executor
+
 interface SystemRepository {
 
     /**
@@ -7,8 +9,11 @@ interface SystemRepository {
      */
     fun getCurrentLocal(): String?
 
-
     fun getCurrentTime() : Long
 
     fun getCurrentTimeUTC() : Long
+
+    fun getMainExecutor() : Executor
+
+    fun getFetchExecutor() : Executor
 }

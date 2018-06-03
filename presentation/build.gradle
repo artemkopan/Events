@@ -41,7 +41,7 @@ dependencies {
     implementation deps.navigation.runtime
     implementation deps.navigation.fragment
 
-    implementation deps.paging
+    implementation deps.paging.runtime
 
     implementation deps.constraint_layout
 

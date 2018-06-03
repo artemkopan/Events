@@ -1,5 +1,6 @@
 package com.artemkopan.presentation.ui.events.list
 
+import android.arch.paging.PagedList
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.LinearLayoutManager.HORIZONTAL
@@ -29,7 +30,7 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
     private val eventsData = ArrayMap<String, EventsAdapter>()
     private val space by lazy { app.resources().dimen(R.dimen.event_item_space) }
 
-    fun submitEvents(categoryId: String, data: List<EventEntity>) {
+    fun submitEvents(categoryId: String, data: PagedList<EventEntity>) {
         checkEventsMap(categoryId)
         eventsData[categoryId]!!.submitList(data)
     }

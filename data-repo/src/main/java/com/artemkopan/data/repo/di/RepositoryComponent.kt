@@ -9,14 +9,17 @@ import com.artemkopan.di.component.RepositoryProvider
 import dagger.Binds
 import dagger.Component
 import dagger.Module
+import javax.inject.Singleton
 
 
 @Module
 interface RepositoryModule {
     @Binds
+    @Singleton
     fun bindEventsResources(impl: EventsResourceRepoImpl): EventsResourceRepo
 
     @Binds
+    @Singleton
     fun bindSystemRepository(impl: SystemRepositoryImpl): SystemRepository
 }
 
@@ -24,6 +27,7 @@ interface RepositoryModule {
 @Component(
         dependencies = [MainToolsProvider::class],
         modules = [RepositoryModule::class])
+@Singleton
 interface RepositoryComponent : RepositoryProvider {
 
     object Initializer {

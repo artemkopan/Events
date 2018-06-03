@@ -2,7 +2,7 @@ package com.artemkopan.presentation.ui.events.list
 
 import com.artemkopan.core.data.events.categories.EventCategoriesInteractor
 import com.artemkopan.core.data.events.list.EventListInteractor
-import com.artemkopan.core.tools.DataState
+import com.artemkopan.core.tools.DataUiState
 import com.artemkopan.presentation.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import javax.inject.Inject
@@ -17,7 +17,7 @@ class EventListViewModel @Inject constructor(
         eventCategoriesInteractor.loadCategories()
         eventCategoriesInteractor.observer()
             .subscribe {
-                if (it is DataState) {
+                if (it is DataUiState) {
                     it.data.forEach { (id) -> eventListInteractor.loadEvents(id) }
                 }
             }
