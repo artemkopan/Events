@@ -76,7 +76,7 @@ abstract class BaseDataAdapter<T, VH : BaseHolder<T>> : ListAdapter<T, VH>, Base
         return helper.getItemViewType(position)
     }
 
-    override fun getListSize(): Int = super.getItemCount()
+    override fun getRealSize(): Int = super.getItemCount()
 
-
+    override fun isEmpty() = itemCount == 0
 }

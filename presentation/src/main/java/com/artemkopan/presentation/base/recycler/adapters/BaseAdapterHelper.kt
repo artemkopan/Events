@@ -22,9 +22,11 @@ interface BaseAdapter<T, VH : BaseHolder<T>> {
 
     fun onBindFooterViewHolder(holder: VH, position: Int)
 
-    fun getListSize(): Int
+    fun getRealSize(): Int
 
     fun getItem(position: Int): T?
+
+    fun isEmpty() : Boolean
 
     fun notifyItemInserted(position: Int)
 
@@ -56,7 +58,7 @@ class BaseAdapterHelper<T, VH : BaseHolder<T>>(private val adapter: BaseAdapter<
     }
 
     fun onBindViewHolder(holder: VH, position: Int) {
-        if (position < adapter.getListSize()) {
+        if (position < adapter.getRealSize()) {
             adapter.onBindItemViewHolder(holder, position)
         } else {
             adapter.onBindFooterViewHolder(holder, position)
@@ -64,11 +66,11 @@ class BaseAdapterHelper<T, VH : BaseHolder<T>>(private val adapter: BaseAdapter<
     }
 
     fun getItemCount(): Int {
-        return if (showFooter) adapter.getListSize() + 1 else adapter.getListSize()
+        return if (showFooter) adapter.getRealSize() + 1 else adapter.getRealSize()
     }
 
     fun getItemViewType(position: Int): Int {
-        return if (position >= adapter.getListSize()) {
+        return if (position >= adapter.getRealSize()) {
             FOOTER
         } else {
             return 0

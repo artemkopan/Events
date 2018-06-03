@@ -76,6 +76,7 @@ abstract class BasePagedAdapter<T, VH : BaseHolder<T>> : PagedListAdapter<T, VH>
         return helper.getItemViewType(position)
     }
 
-    override fun getListSize(): Int = super.getItemCount()
+    override fun getRealSize(): Int = super.getItemCount()
 
+    override fun isEmpty() = itemCount == 0
 }

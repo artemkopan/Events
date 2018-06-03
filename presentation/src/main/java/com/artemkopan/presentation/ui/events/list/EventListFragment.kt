@@ -117,7 +117,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     }
 
     private fun restoreRecyclerStateAndAnimate() {
-        if (!recyclerState.hasState() && adapter.getListSize() == 0) {
+        if (!recyclerState.hasState() && adapter.getRealSize() == 0) {
             TransitionManager.beginDelayedTransition(
                 eventsGroupRecyclerView,
                 TransitionSet().apply {
