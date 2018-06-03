@@ -7,14 +7,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.LinearLayoutManager.HORIZONTAL
 import android.support.v7.widget.RecyclerView
 import android.util.ArrayMap
-import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.entity.EventEntity
 import com.artemkopan.di.App
 import com.artemkopan.presentation.R
-import com.artemkopan.presentation.base.recycler.RecyclerStateManager
 import com.artemkopan.presentation.base.recycler.adapters.BaseDataAdapter
 import com.artemkopan.presentation.base.recycler.holders.BaseHolder
 import com.artemkopan.presentation.extensions.dimen
@@ -33,7 +31,6 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
 
     private val viewPool = RecyclerView.RecycledViewPool()
     private val eventsData = ArrayMap<String, EventsAdapter>()
-    private val eventsStates = SparseArray<RecyclerStateManager>()
 
     private val space by lazy { app.resources().dimen(R.dimen.event_item_space) }
 
@@ -92,24 +89,20 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
 
         private fun saveState() {
             val position = adapterPosition
-            val value: RecyclerStateManager = object : RecyclerStateManager() {
-                override fun getStateTag(): String {
-                    return "${KEY_STATE}_$position"
-                }
-            }
-            value.saveState(eventsRecyclerView, eventsBundle)
-            eventsStates.put(position, value)
+            eventsBundle.putParcelable(getStateTag(position),
+                                       eventsRecyclerView.layoutManager!!.onSaveInstanceState())
         }
 
         private fun restoreState() {
             val position = adapterPosition
-            eventsStates[position]?.let {
-                it.restoreState(eventsBundle)
-                it.applyState(eventsRecyclerView)
-                eventsBundle.remove(it.getStateTag())
-                eventsStates.remove(position)
+            val tag = getStateTag(position)
+            if (eventsBundle.containsKey(tag)) {
+                eventsRecyclerView.layoutManager!!.onRestoreInstanceState(eventsBundle.getParcelable(tag))
+                eventsBundle.remove(tag)
             }
         }
+
+        private fun getStateTag(position: Int) = "${KEY_STATE}_$position"
     }
 
 

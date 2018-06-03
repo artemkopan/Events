@@ -39,8 +39,8 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         savedInstanceState?.let {
-            recyclerState.restoreState(it)
             adapter.eventsBundle.putAll(it)
+            recyclerState.restoreState(it)
         }
     }
 
@@ -117,7 +117,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     }
 
     private fun restoreRecyclerStateAndAnimate() {
-        if (adapter.getListSize() == 0) {
+        if (!recyclerState.hasState() && adapter.getListSize() == 0) {
             TransitionManager.beginDelayedTransition(
                 eventsGroupRecyclerView,
                 TransitionSet().apply {
