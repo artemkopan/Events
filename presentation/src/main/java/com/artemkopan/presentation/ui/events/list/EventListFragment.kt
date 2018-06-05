@@ -8,6 +8,7 @@ import android.transition.TransitionManager
 import android.transition.TransitionSet
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.tools.UiState
@@ -49,6 +50,10 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         eventsGroupRecyclerView.adapter = adapter
         eventsGroupRecyclerView.layoutManager = LinearLayoutManager(context)
 
+        bar.post {
+            (eventsGroupRecyclerView.layoutParams as ViewGroup.MarginLayoutParams).bottomMargin = bar.height
+        }
+
         adapter.setClickEvent { viewId, pos, item ->
             //            val args = Bundle().apply { putString("photo", item.thumbnail) }
 //            NavHostFragment.findNavController(this).navigate(R.id.actionEventDetail, args)
@@ -74,56 +79,56 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     private fun subscribeCategories() {
         viewModel.observeCategories()
-            .subscribe {
-                //todo implement categories loading
-                when {
-                    it.isError -> {
-                        shoeError(it)
-                    }
-                    it.isSuccess -> {
-                        it.data!!.let {
-                            restoreRecyclerStateAndAnimate()
-                            adapter.submitList(it)
-                            subscribeEvents(it)
+                .subscribe {
+                    //todo implement categories loading
+                    when {
+                        it.isError -> {
+                            shoeError(it)
+                        }
+                        it.isSuccess -> {
+                            it.data!!.let {
+                                restoreRecyclerStateAndAnimate()
+                                adapter.submitList(it)
+                                subscribeEvents(it)
+                            }
                         }
                     }
                 }
-            }
-            .addTo(destroyViewDisposable)
+                .addTo(destroyViewDisposable)
     }
 
 
     private fun subscribeEvents(categories: List<CategoryEntity>) {
         categories.forEach { (id) ->
             viewModel.observeEvents(id)
-                .subscribe {
-                    adapter.showEventsLoading(id, it.isLoading)
-                    when {
-                        it.isError -> {
-                            shoeError(it)
-                        }
-                        it.isSuccess -> {
-                            eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data!!) }
+                    .subscribe {
+                        adapter.showEventsLoading(id, it.isLoading)
+                        when {
+                            it.isError -> {
+                                shoeError(it)
+                            }
+                            it.isSuccess -> {
+                                eventsGroupRecyclerView.post { adapter.submitEvents(id, it.data!!) }
+                            }
                         }
                     }
-                }
-                .addTo(destroyViewDisposable)
+                    .addTo(destroyViewDisposable)
         }
     }
 
     private fun shoeError(it: UiState<*>) {
         Toast.makeText(context, it.throwable?.message ?: "", Toast.LENGTH_LONG)
-            .show()
+                .show()
     }
 
     private fun restoreRecyclerStateAndAnimate() {
         if (!recyclerState.hasState() && adapter.getRealSize() == 0) {
             TransitionManager.beginDelayedTransition(
-                eventsGroupRecyclerView,
-                TransitionSet().apply {
-                    addTransition(Fade().setDuration(100))
-                    addTransition(Slide(Gravity.BOTTOM).setDuration(200))
-                }
+                    eventsGroupRecyclerView,
+                    TransitionSet().apply {
+                        addTransition(Fade().setDuration(100))
+                        addTransition(Slide(Gravity.BOTTOM).setDuration(200))
+                    }
             )
         } else if (recyclerState.hasState()) {
             recyclerState.applyState(eventsGroupRecyclerView)
