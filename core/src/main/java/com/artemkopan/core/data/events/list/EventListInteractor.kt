@@ -2,7 +2,7 @@ package com.artemkopan.core.data.events.list
 
 import android.arch.paging.PagedList
 import com.artemkopan.core.entity.EventEntity
-import com.artemkopan.core.tools.UiState
+import com.artemkopan.core.states.UiState
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 

@@ -2,11 +2,12 @@ package com.artemkopan.presentation.ui.events.list
 
 import android.arch.paging.PagedList
 import android.os.Bundle
+import android.support.v4.util.ArrayMap
+import android.support.v4.util.ArraySet
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.LinearLayoutManager.HORIZONTAL
 import android.support.v7.widget.RecyclerView
-import android.util.ArrayMap
 import android.view.View
 import android.view.ViewGroup
 import com.artemkopan.core.entity.CategoryEntity
@@ -31,6 +32,7 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
 
     private val viewPool = RecyclerView.RecycledViewPool()
     private val eventsData = ArrayMap<String, EventsAdapter>()
+    private val pendingEventsState = ArraySet<EventsGroupHolder>()
 
     private val space by lazy { app.resources().dimen(R.dimen.event_item_space) }
 
@@ -42,6 +44,17 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
     fun showEventsLoading(categoryId: String, isLoading: Boolean) {
         initEventsAdapterIfNeed(categoryId)
         eventsData[categoryId]!!.showFooter(isLoading)
+    }
+
+    fun onRestoreInstanceState(outState: Bundle) {
+        eventsBundle.putAll(outState)
+    }
+
+    fun onSaveInstanceState(outState: Bundle) {
+        pendingEventsState.forEach { it.saveState() }
+        pendingEventsState.clear()
+        outState.putAll(eventsBundle)
+        eventsBundle.clear()
     }
 
     override fun onCreateItemViewHolder(parent: ViewGroup, viewType: Int): EventsGroupHolder {
@@ -74,7 +87,6 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
         }
 
         override fun recycled() {
-            saveState()
             eventsRecyclerView.adapter = null
             super.recycled()
         }
@@ -87,10 +99,19 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
             detailListButton.setOnClickListener(null)
         }
 
-        private fun saveState() {
+        override fun onViewAttachedToWindow() {
+            pendingEventsState.add(this)
+        }
+
+        override fun onViewDetachedFromWindow() {
+            pendingEventsState.remove(this)
+            saveState()
+        }
+
+        fun saveState() {
             val position = adapterPosition
             eventsBundle.putParcelable(getStateTag(position),
-                                       eventsRecyclerView.layoutManager!!.onSaveInstanceState())
+                    eventsRecyclerView.layoutManager!!.onSaveInstanceState())
         }
 
         private fun restoreState() {
@@ -99,6 +120,7 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
             if (eventsBundle.containsKey(tag)) {
                 eventsRecyclerView.layoutManager!!.onRestoreInstanceState(eventsBundle.getParcelable(tag))
                 eventsBundle.remove(tag)
+                pendingEventsState.remove(this)
             }
         }
 

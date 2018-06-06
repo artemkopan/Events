@@ -13,13 +13,20 @@ import kotlinx.android.synthetic.*
 abstract class BaseHolder<T>(override val containerView: View)
     : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
+    open fun onViewAttachedToWindow() {}
+
     abstract fun bind(item: T)
 
-    open fun recycled() {
-        clearFindViewByIdCache()
-    }
+    open fun onViewDetachedFromWindow() {}
 
     abstract fun bindClickListener(listener: View.OnClickListener)
 
     abstract fun unbindClickListener()
+
+    open fun recycled() {}
+
+    fun clearViewCache() {
+        clearFindViewByIdCache()
+    }
+
 }

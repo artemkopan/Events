@@ -78,6 +78,7 @@ class BaseAdapterHelper<T, VH : BaseHolder<T>>(private val adapter: BaseAdapter<
     }
 
     fun onViewAttachedToWindow(holder: VH) {
+        holder.onViewAttachedToWindow()
         holder.bindClickListener(View.OnClickListener { view ->
             val pos = holder.adapterPosition
             clickEvent?.invoke(view.id, pos, adapter.getItem(pos))
@@ -85,10 +86,12 @@ class BaseAdapterHelper<T, VH : BaseHolder<T>>(private val adapter: BaseAdapter<
     }
 
     fun onViewDetachedFromWindow(holder: VH) {
+        holder.onViewDetachedFromWindow()
         holder.unbindClickListener()
     }
 
     fun onViewRecycled(holder: VH) {
         holder.recycled()
+        holder.clearViewCache()
     }
 }

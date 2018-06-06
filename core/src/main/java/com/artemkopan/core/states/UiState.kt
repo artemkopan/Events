@@ -1,4 +1,4 @@
-package com.artemkopan.core.tools
+package com.artemkopan.core.states
 
 class UiState<T> {
 

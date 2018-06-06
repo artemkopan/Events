@@ -10,7 +10,8 @@ import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
-import com.artemkopan.core.tools.UiState
+import com.artemkopan.core.tools.Logger
+import com.artemkopan.core.states.UiState
 import com.artemkopan.di.component.ApplicationProvider
 import com.artemkopan.presentation.R
 import com.artemkopan.presentation.base.BaseFragment
@@ -40,7 +41,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         savedInstanceState?.let {
-            adapter.eventsBundle.putAll(it)
+            adapter.onRestoreInstanceState(it)
             recyclerState.restoreState(it)
         }
     }
@@ -67,8 +68,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putAll(adapter.eventsBundle)
-        adapter.eventsBundle.clear()
+        adapter.onSaveInstanceState(outState)
         recyclerState.saveState(eventsGroupRecyclerView, outState)
     }
 
@@ -102,6 +102,7 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         categories.forEach { (id) ->
             viewModel.observeEvents(id)
                     .subscribe {
+                        Logger.d("category = $id, state = $it")
                         adapter.showEventsLoading(id, it.isLoading)
                         when {
                             it.isError -> {

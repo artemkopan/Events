@@ -6,8 +6,13 @@ import com.artemkopan.core.data.SystemRepository
 import com.artemkopan.core.data.events.EventsNetworkClient
 import com.artemkopan.core.data.events.list.EventListInteractor
 import com.artemkopan.core.entity.EventEntity
-import com.artemkopan.core.tools.*
+import com.artemkopan.core.states.PagedListKeyedUiStateSubject
+import com.artemkopan.core.states.UiState
+import com.artemkopan.core.states.UiStateSubject
+import com.artemkopan.core.states.subscribe
+import com.artemkopan.core.tools.Logger
 import io.reactivex.Observable
+import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
@@ -45,20 +50,20 @@ class EventListInteractorImpl @Inject constructor(private val eventsNetworkClien
     private inner class EventsStateSubject(private val categoryId: String)
         : PagedListKeyedUiStateSubject<String, EventEntity, Any>() {
 
-        override fun createPagedList(payload: Any?): PagedList<EventEntity> {
+        override fun create(payload: Any?): PagedList<EventEntity> {
             val config = PagedList.Config.Builder()
-                .setEnablePlaceholders(false)
-                .setPageSize(LIMIT)
-                .build()
+                    .setEnablePlaceholders(false)
+                    .setPageSize(LIMIT)
+                    .build()
 
             return PagedList.Builder(this, config)
-                .setFetchExecutor(systemRepository.getFetchExecutor())
-                .setNotifyExecutor(systemRepository.getMainExecutor())
-                .build()
+                    .setFetchExecutor(systemRepository.getFetchExecutor())
+                    .setNotifyExecutor(systemRepository.getMainExecutor())
+                    .build()
         }
 
         override fun loadInitial(params: LoadInitialParams<String>, callback: LoadInitialCallback<EventEntity>) {
-            getEvents(null, params.requestedLoadSize, callback)
+            getEvents(params.requestedInitialKey, params.requestedLoadSize, callback)
         }
 
         override fun loadAfter(params: LoadParams<String>, callback: LoadCallback<EventEntity>) {
@@ -72,18 +77,18 @@ class EventListInteractorImpl @Inject constructor(private val eventsNetworkClien
         override fun getKey(item: EventEntity) = item.id
 
         fun getEvents(startAfterId: String?, limit: Int, callback: LoadCallback<EventEntity>) {
-            compositeDisposable?.clear()
+            compositeDisposable!!.clear()
 
             eventsNetworkClient.getEvents(categoryId, startAfterId, limit.toLong())
-                .subscribeOn(Schedulers.io())
-                .doOnSubscribe { compositeDisposable?.add(it) }
-                .doOnError {
-                    Logger.e(
-                        Const.Tag.EVENT_LIST, "Error load movie list: category " +
+                    .subscribeOn(Schedulers.io())
+                    .doOnError {
+                        Logger.e(
+                                Const.Tag.EVENT_LIST, "Error load movie list: category " +
                                 "$categoryId, page $'page", it
-                    )
-                }
-                .subscribe(subject, { callback.onResult(it) })
+                        )
+                    }
+                    .subscribe(this, { callback.onResult(it) })
+                    .addTo(compositeDisposable!!)
         }
     }
 }

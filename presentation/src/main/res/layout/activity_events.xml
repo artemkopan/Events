@@ -9,8 +9,8 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        app:elevation="0dp"
-        android:layout_height="@dimen/toolbar_tall_height">
+        android:layout_height="@dimen/toolbar_tall_height"
+        app:elevation="0dp">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -18,8 +18,8 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleGravity="top"
             app:expandedTitleMarginStart="@dimen/event_item_space"
-            app:layout_scrollFlags="scroll|snap"
             app:expandedTitleTextAppearance="@style/AppTextAppearance.CollapsedToolbar"
+            app:layout_scrollFlags="scroll|snap"
             app:title="@string/events_title"
             app:titleEnabled="true">
 
@@ -52,18 +52,18 @@
 
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/bar"
-        style="@style/Widget.MaterialComponents.BottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:navigationIcon="@drawable/ic_menu_white_24dp" />
 
-
     <com.artemkopan.presentation.views.StatusBarView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:translationZ="12dp"
+        android:background="@color/colorPrimaryDark"
         android:fitsSystemWindows="true"
-        android:background="@color/colorPrimaryDark" />
+        android:outlineProvider="none"
+        android:translationZ="12dp" />
 
 </android.support.design.widget.CoordinatorLayout>

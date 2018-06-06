@@ -28,11 +28,13 @@
 
     <style name="AppTextAppearance.Toolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="AppTextAppearance.CollapsedToolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="fontFamily">@font/nunito</item>
         <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
 
@@ -42,7 +44,7 @@
         <item name="layout_collapseMode">pin</item>
         <item name="titleMarginStart">@dimen/event_item_space</item>
         <item name="titleTextAppearance">@style/AppTextAppearance.Toolbar</item>
-        <item name="titleTextColor">@color/colorWhite</item>
+        <item name="titleTextColor">@color/textColorPrimary</item>
     </style>
 
     <style name="Toolbar.WithoutInset">
