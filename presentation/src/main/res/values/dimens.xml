@@ -20,4 +20,6 @@
 
     <dimen name="progress_size">30dp</dimen>
 
+    <dimen name="toolbar_tall_height">72dp</dimen>
+
 </resources>

@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.artemkopan.presentation.ui.events.EventsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="@dimen/toolbar_tall_height">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:expandedTitleMarginStart="@dimen/event_item_space"
+            app:layout_scrollFlags="scroll|snap"
+            app:expandedTitleTextAppearance="@style/AppTextAppearance.CollapsedToolbar"
+            app:title="@string/events_title"
+            app:titleEnabled="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar.WithoutInset"
+                app:title="@string/events_title" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
 
     <fragment
         android:id="@+id/nav_events_host_fragment"
@@ -14,7 +39,31 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         app:defaultNavHost="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:navGraph="@navigation/nav_events" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addEventFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/bar"
+        app:maxImageSize="16dp"
+        app:srcCompat="@drawable/ic_add_white_24dp" />
 
-</FrameLayout>
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:navigationIcon="@drawable/ic_menu_white_24dp" />
+
+
+    <com.artemkopan.presentation.views.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="12dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark" />
+
+</android.support.design.widget.CoordinatorLayout>

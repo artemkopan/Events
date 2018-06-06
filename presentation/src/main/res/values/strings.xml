@@ -1,6 +1,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">presentation</string>
 
+    <string name="events_title">Events</string>
     <string name="reviews"><xliff:g example="24" id="reviews_count">%1$d</xliff:g> reviews</string>
     <string name="schedule">Schedule:</string>
     <string name="see_all">SEE ALL</string>

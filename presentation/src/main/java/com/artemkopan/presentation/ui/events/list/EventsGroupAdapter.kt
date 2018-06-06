@@ -59,7 +59,7 @@ class EventsGroupAdapter @Inject constructor(private val app: App,
         init {
             eventsRecyclerView.layoutManager = LinearLayoutManager(containerView.context, HORIZONTAL, false)
             eventsRecyclerView.isNestedScrollingEnabled = false
-            eventsRecyclerView.addItemDecoration(EventsListItemDecoration(space))
+            eventsRecyclerView.addItemDecoration(EventsListItemDecoration(space, true))
             eventsRecyclerView.setRecycledViewPool(viewPool)
             eventsRecyclerView.setHasFixedSize(true)
         }

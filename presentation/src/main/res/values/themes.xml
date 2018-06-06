@@ -7,6 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
         <item name="android:windowBackground">@color/colorPrimary</item>
         <item name="android:editTextColor">@color/textColorPrimary</item>
         <item name="android:textColor">@color/textColorPrimary</item>
@@ -20,6 +23,38 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+
+    <style name="AppTextAppearance" />
+
+    <style name="AppTextAppearance.Toolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/nunito</item>
+    </style>
+
+    <style name="AppTextAppearance.CollapsedToolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="layout_collapseMode">pin</item>
+        <item name="titleMarginStart">@dimen/event_item_space</item>
+        <item name="titleTextAppearance">@style/AppTextAppearance.Toolbar</item>
+        <item name="titleTextColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Toolbar.WithoutInset">
+        <item name="android:contentInsetEnd">0dp</item>
+        <item name="android:contentInsetLeft">0dp</item>
+        <item name="android:contentInsetRight">0dp</item>
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetRight">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
 
 
 </resources>

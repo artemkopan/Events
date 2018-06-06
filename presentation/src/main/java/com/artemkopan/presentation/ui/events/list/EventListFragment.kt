@@ -8,7 +8,6 @@ import android.transition.TransitionManager
 import android.transition.TransitionSet
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import com.artemkopan.core.entity.CategoryEntity
 import com.artemkopan.core.tools.UiState
@@ -19,6 +18,7 @@ import com.artemkopan.presentation.base.Injectable
 import com.artemkopan.presentation.base.recycler.RecyclerStateManager
 import com.artemkopan.presentation.ui.events.EventsComponent
 import io.reactivex.rxkotlin.addTo
+import kotlinx.android.synthetic.main.activity_events.*
 import kotlinx.android.synthetic.main.fragment_event_list.*
 import javax.inject.Inject
 
@@ -50,8 +50,8 @@ class EventListFragment : BaseFragment<EventListViewModel>(), Injectable {
         eventsGroupRecyclerView.adapter = adapter
         eventsGroupRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        bar.post {
-            (eventsGroupRecyclerView.layoutParams as ViewGroup.MarginLayoutParams).bottomMargin = bar.height
+        activity!!.toolbar.post {
+            eventsGroupRecyclerView.addItemDecoration(EventsListItemDecoration(activity!!.toolbar.height, false))
         }
 
         adapter.setClickEvent { viewId, pos, item ->
